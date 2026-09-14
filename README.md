@@ -25,9 +25,12 @@ The repertoire and QTL stages hold the full in-house repertoires in memory (abou
 
 ## Data
 
+The inputs (about 436 MB) are archived on Zenodo, DOI `TODO` (assigned at publication).
+Point `fetch_data.sh` at the archive and it unpacks it into `data/`:
+
 ```bash
-bash fetch_data.sh                 # download and unpack the Zenodo archive into data/
-bash fetch_data.sh --link-local    # or symlink from a sibling husa_manuscript checkout
+ZENODO_URL="<archive URL>" bash fetch_data.sh   # download and unpack into data/
+bash fetch_data.sh --link-local                 # or symlink from a sibling husa_manuscript checkout
 ```
 
 `data/README.md` lists every input and the manuscript run it comes from.
