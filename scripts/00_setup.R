@@ -27,16 +27,16 @@ IN <- list(
 IN$gene_bed <- file.path(IN$bed_dir, "gene.bed")
 
 OUT <- list(
-  husa       = "results/husa",
-  repertoire = "results/repertoire",
-  rss_leader = "results/rss_leader",
-  qtl        = "results/qtl",
-  figures    = "results/figures",
-  source     = "results/figures/source_data"
+  husa       = "data/husa",
+  repertoire = "data/repertoire",
+  rss_leader = "data/rss_leader",
+  qtl        = "data/qtl",
+  figures    = "figures",
+  source     = "figure_data"
 )
 for (d in OUT) dir.create(d, recursive = TRUE, showWarnings = FALSE)
 
 need <- function(path) {
-  if (!file.exists(path)) stop("missing input: ", path, " (run fetch_data.sh)", call. = FALSE)
+  if (!file.exists(path)) stop("missing input: ", path, " (see README: Data)", call. = FALSE)
   path
 }

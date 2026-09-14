@@ -3,10 +3,10 @@
 # A: sequence logo plus the nine most frequent RSSs with their motif tag and allele count,
 # B: unique alleles and unique RSSs by agreement with the segment consensus,
 # C: HUSA versus IMGT overlap with the per-RSS genomic sample counts.
-# Tables are computed only when missing from results/figures/source_data; the figure is
+# Tables are computed only when missing from figure_data; the figure is
 # always drawn from them.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(ggrepel); library(ggseqlogo); library(ComplexUpset); library(ggpubr) })
 set.seed(42)
 
@@ -16,7 +16,7 @@ tables <- file.path(OUT$source, paste0("supp2_", c("rss_aligned.csv.gz", "seqlog
 names(tables) <- c("aligned", "seqlogo", "letters", "counts", "tags", "overlap", "summary", "unique", "layout")
 
 if (!all(file.exists(tables))) {
-source("R/lib/rss_helpers.R")
+source("scripts/lib/rss_helpers.R")
 
 # ---- IMGT reference RSSs, F/ORF alleles of genes in the baseline reference ----
 reference_genes <- unlist(lapply(list.files(need(IN$watson_reference), pattern = "IG[HKL][VDJ]\\.fasta$", full.names = TRUE),

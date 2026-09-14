@@ -3,11 +3,11 @@
 # IUIS gene group, and kept only where the subject's inferred genotype carries every gene
 # it was assigned to.
 #
-#   results/repertoire/gg_repertoire_data_<CHAIN>_genotype_corrected.csv.gz
-#   results/repertoire/genotypes_all_loci_collapsed.csv.gz       one row per subject x ASC gene
-#   results/repertoire/genotype_inference_with_husa_labels.csv.gz genotype calls with ASC and IUIS names
+#   data/repertoire/gg_repertoire_data_<CHAIN>_genotype_corrected.csv.gz
+#   data/repertoire/genotypes_all_loci_collapsed.csv.gz       one row per subject x ASC gene
+#   data/repertoire/genotype_inference_with_husa_labels.csv.gz genotype calls with ASC and IUIS names
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(alakazam); library(piglet) })
 
 husa <- fread(need(file.path(OUT$husa, "husa.tsv")))

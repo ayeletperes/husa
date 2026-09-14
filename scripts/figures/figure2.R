@@ -3,11 +3,11 @@
 # A: per-gene-type Venn of allele membership (baseline, DS1 = 1KGP, DS2 = HPRC, DS3 = in-house).
 # B: alleles ranked by carrier count, labels on the top ranks, novel/known pie inset.
 # C: per-locus upset over ancestry, with the pairwise sample-to-sample allele overlap.
-# Tables are computed only when missing from results/figures/source_data; the figure is
+# Tables are computed only when missing from figure_data; the figure is
 # always drawn from them.
 
-source("R/00_setup.R")
-source("R/lib/upset_v3.R")
+source("scripts/00_setup.R")
+source("scripts/lib/upset_v3.R")
 suppressPackageStartupMessages({ library(ggplot2); library(ggpubr); library(patchwork); library(ComplexUpset); library(cowplot)
   library(ggVennDiagram); library(ggvenn); library(ggrepel) })
 set.seed(42)  # ggrepel places labels by random search

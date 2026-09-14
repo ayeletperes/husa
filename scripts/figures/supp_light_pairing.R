@@ -1,11 +1,11 @@
 #!/usr/bin/env Rscript
 # Light-chain pairing: P(J|V) and P(V|J) for IGK (A, B) and IGL (C, D), each over the
 # Spearman heatmap of its rank orders. V is seriated then put back in genomic order; J is
-# seriated only. Tables are computed only when missing from results/figures/source_data;
+# seriated only. Tables are computed only when missing from figure_data;
 # the figure is always drawn from them.
 
-source("R/00_setup.R")
-source("R/lib/dj_pairing.R")
+source("scripts/00_setup.R")
+source("scripts/lib/dj_pairing.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot) })
 
 tables <- file.path(OUT$source, c("light_pairing_probabilities.csv.gz", "light_pairing_correlations.csv.gz", "light_pairing_axis_levels.csv"))

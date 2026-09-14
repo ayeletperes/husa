@@ -1,10 +1,10 @@
 #!/usr/bin/env Rscript
 # Supplementary figure 9: unique alleles per ASC, split by cohort support (AIRR-seq only,
 # genomic only, both, neither). ASCs that share a gene are merged so each gene appears once.
-# The table is computed only when missing from results/figures/source_data; the figure is
+# The table is computed only when missing from figure_data; the figure is
 # always drawn from the table.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork) })
 
 tag_levels <- c("Both", "Genomic only", "AIRR-seq only", "Not in cohorts")

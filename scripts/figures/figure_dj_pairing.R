@@ -2,11 +2,11 @@
 # IGHD/IGHJ pairing figure. A: P(J|D) per subject by IGHJ ASC, coloured by IGHD ASC, over
 # the Spearman heatmap of the D rank orders. B: P(D|J), the mirror. C: the same conditional
 # split by genotype at the strongest pairing QTL, with its marginals.
-# Tables are computed only when missing from results/figures/source_data; the figure is
+# Tables are computed only when missing from figure_data; the figure is
 # always drawn from them.
 
-source("R/00_setup.R")
-source("R/lib/dj_pairing.R")
+source("scripts/00_setup.R")
+source("scripts/lib/dj_pairing.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot) })
 
 # igh_37391 is the lowest p value in the enrichment MANOVA (J4 anchored); igh_38679 ties with it in

@@ -2,10 +2,10 @@
 # Supplementary figure 1: Baseline / HUSA / IMGT sequence-set Venn per segment. Membership
 # is exact sequence equality after degapping and uppercasing; IMGT is restricted to F/ORF
 # alleles of genes present in HUSA (compared in the IMGT name space, via the husa column).
-# Tables are computed only when missing from results/figures/source_data; the figure is
+# Tables are computed only when missing from figure_data; the figure is
 # always drawn from them.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(ggVennDiagram); library(ggvenn) })
 
 segments <- c("IGHV", "IGHD", "IGHJ", "IGKV", "IGKJ", "IGLV", "IGLJ")

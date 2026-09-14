@@ -3,10 +3,10 @@
 # figure. A: P(D|V) per subject by IGHD ASC, coloured by IGHV ASC, over the IGHD rank-order
 # Spearman heatmap. B: P(V|D), the mirror. The IGHD axis carries the same grouping and genomic
 # order as the D-J figure; IGHV is seriated. Tables are computed only when missing from
-# results/figures/source_data; the figure is always drawn from them.
+# figure_data; the figure is always drawn from them.
 
-source("R/00_setup.R")
-source("R/lib/dj_pairing.R")
+source("scripts/00_setup.R")
+source("scripts/lib/dj_pairing.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot) })
 
 tables <- file.path(OUT$source, c("supp7_probabilities.csv.gz", "supp7_correlations.csv.gz", "supp7_axis_levels.csv"))

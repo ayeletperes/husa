@@ -3,9 +3,9 @@
 # first). D-F show the IGKV1D-13 coding-allele example from the QTL stage: the usage
 # Manhattan, gene usage by lead-SNP genotype, and lead-CDR3 usage against gene usage (zeros
 # re-added so the through-origin fit anchors over the full range). Tables are computed only
-# when missing from results/figures/source_data; the figure is always drawn from them.
+# when missing from figure_data; the figure is always drawn from them.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork) })
 set.seed(42)
 

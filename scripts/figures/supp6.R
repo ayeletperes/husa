@@ -4,9 +4,9 @@
 # individuals, on depth-matched subsamples. C: CDR3 sharing against the V allele it is used
 # with. Panel B is a full pairwise sweep and takes tens of minutes; its tables are reused by
 # the CDR3-sharing main figure. Tables are computed only when missing from
-# results/figures/source_data; the figure is always drawn from them.
+# figure_data; the figure is always drawn from them.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(ggpubr) })
 
 tables <- file.path(OUT$source, paste0("supp6_", c("axis_levels.csv", "igk_public_cdr3_ccdf.csv", "igk_rgs_vs_cdr3_overlap.csv.gz", "igk_overlap_bin_quartiles.csv", "igk_cdr3_allele_sharing.csv")))

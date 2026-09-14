@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # Figure 1: subjects per locus and ancestry in the three genomic cohorts.
-# The table is computed only when missing from results/figures/source_data; the figure is
+# The table is computed only when missing from figure_data; the figure is
 # always drawn from the table, so the shipped source_data alone regenerates it.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages(library(ggplot2))
 
 tables <- file.path(OUT$source, "figure1_subject_counts.csv")

@@ -2,14 +2,14 @@
 # Gene-usage QTL (all loci) and D-J pairing QTL (IGH) with piglet, variant annotation by
 # gene feature, and the IGKV1D-13 example behind the CDR3-sharing figure.
 #
-#   results/qtl/source_data/   usage_associations_<LOCUS>.tsv.gz, asc_usage.tsv.gz, dj_enrichment.tsv.gz,
+#   data/qtl/source_data/   usage_associations_<LOCUS>.tsv.gz, asc_usage.tsv.gz, dj_enrichment.tsv.gz,
 #                              pairing_associations.tsv.gz, pairing_associations_by_d.tsv.gz, dosage_long.tsv.gz
-#   results/qtl/reports/       usage_leads, usage_per_asc, pairing_leads, pairing_leads_by_d, pairing_per_partner,
+#   data/qtl/reports/       usage_leads, usage_per_asc, pairing_leads, pairing_leads_by_d, pairing_per_partner,
 #                              thresholds, variant_features, feature_summary_*, feature_enrichment,
 #                              significant_variants, variant_summary  (.tsv)
-#   results/qtl/igkv1d13/      panelA_manhattan, panelB_usage_by_genotype, panelC_cdr3_vs_usage  (.tsv)
+#   data/qtl/igkv1d13/      panelA_manhattan, panelB_usage_by_genotype, panelC_cdr3_vs_usage  (.tsv)
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages(library(piglet))
 for (d in c("source_data", "reports", "igkv1d13")) dir.create(file.path(OUT$qtl, d), showWarnings = FALSE)
 w <- function(x, sub, name) fwrite(x, file.path(OUT$qtl, sub, name), sep = "\t")

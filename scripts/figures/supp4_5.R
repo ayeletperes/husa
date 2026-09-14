@@ -3,11 +3,11 @@
 # IUIS group, rows and columns ordered by the blockiness optimiser (seed 123 before each call).
 #   supp4  IGKV and IGLV: an RSS heatmap stacked over a leader heatmap.
 #   supp5  IGHD 5'/3' and IGHJ / IGKJ / IGLJ: RSS heatmaps only.
-# Tables are computed only when missing from results/figures/source_data; the figures are
+# Tables are computed only when missing from figure_data; the figures are
 # always drawn from them.
 
-source("R/00_setup.R")
-source("R/lib/figure56_helpers.R")
+source("scripts/00_setup.R")
+source("scripts/lib/figure56_helpers.R")
 
 tables <- file.path(OUT$source, paste0("supp45_", c("matrix.csv.gz", "rows.csv.gz", "columns.csv", "dendrogram_merges.csv.gz", "dendrogram_leaves.csv.gz", "consensus.csv", "usage.csv.gz")))
 names(tables) <- c("matrix", "rows", "columns", "merges", "leaves", "consensus", "usage")

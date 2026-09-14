@@ -5,11 +5,11 @@
 #
 # Seeds are the ones the published figure used: 123 before each optimize_order_enhanced()
 # call (it searches dendrogram flips stochastically) and 1234 before the Mantel block.
-# Tables are computed only when missing from results/figures/source_data; the figure is
+# Tables are computed only when missing from figure_data; the figure is
 # always drawn from them.
 
-source("R/00_setup.R")
-source("R/lib/figure56_helpers.R")
+source("scripts/00_setup.R")
+source("scripts/lib/figure56_helpers.R")
 suppressPackageStartupMessages(library(ggplot2))
 
 tables <- file.path(OUT$source, paste0("figure4_", c("schematic.csv", "heatmap_matrix.csv.gz", "heatmap_rows.csv.gz", "heatmap_columns.csv",

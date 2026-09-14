@@ -3,10 +3,10 @@
 # AIRR-seq genotypes and the baseline ASC reference, attaches the frozen IgLabel labels,
 # and re-clusters every segment into allele similarity clusters with piglet.
 #
-#   results/husa/husa.tsv             one row per allele (2587 in the manuscript run)
-#   results/husa/husa_rss_filter.tsv  the subset with complete, consistent RSS evidence
+#   data/husa/husa.tsv             one row per allele (2587 in the manuscript run)
+#   data/husa/husa_rss_filter.tsv  the subset with complete, consistent RSS evidence
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 
 collapse_unique <- function(x, sep = ", ") {
   x <- unique(x[!is.na(x)]); x <- x[x != ""]

@@ -2,10 +2,10 @@
 # Figure 3: the AIRR-seq allele ranking (A) and the IGHV RSS and leader characterisation:
 # sequence logos (B, C), unique allele and unique motif counts by agreement with the IGHV
 # consensus (D, E), and the HUSA-vs-IMGT overlap of unique motifs (F, G).
-# Tables are computed only when missing from results/figures/source_data; the figure is
+# Tables are computed only when missing from figure_data; the figure is
 # always drawn from them.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(ggpubr); library(ggseqlogo); library(ComplexUpset); library(cowplot); library(ggrepel) })
 set.seed(42)
 
@@ -21,7 +21,7 @@ tables <- file.path(OUT$source, paste0("figure3_", c("A_rank", "A_pie", "A_dagge
 names(tables) <- c("rank", "pie", "dagger", "rss_logo", "rss_counts", "rss_overlap", "leader_logo", "leader_counts", "leader_overlap")
 
 if (!all(file.exists(tables))) {
-source("R/lib/rss_helpers.R")
+source("scripts/lib/rss_helpers.R")
 suppressPackageStartupMessages({ library(Biostrings); library(alakazam) })
 husa <- fread(need(file.path(OUT$husa, "husa.tsv")))
 

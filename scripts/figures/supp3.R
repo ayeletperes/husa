@@ -3,10 +3,10 @@
 # l_part1 + l_part2 of expressed alleles; IMGT stores the combined leader, so the two are
 # matched by exact equality after degapping. A: logo over modal-length alleles, B: unique
 # alleles versus unique leaders by consensus class, C: HUSA-vs-IMGT upset.
-# Tables are computed only when missing from results/figures/source_data; the figure is
+# Tables are computed only when missing from figure_data; the figure is
 # always drawn from them.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(ggseqlogo); library(patchwork); library(ComplexUpset) })
 set.seed(42)
 

@@ -2,10 +2,10 @@
 # guQTL summary figure. A: a cartoon of the three steps of the scan (seeded synthetic values,
 # not a result). B: significant gene-usage QTL SNP counts by location, per locus and segment,
 # from the QTL variant summary; UTR is folded into intergenic.
-# Tables are computed only when missing from results/figures/source_data; the figure is
+# Tables are computed only when missing from figure_data; the figure is
 # always drawn from them.
 
-source("R/00_setup.R")
+source("scripts/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork) })
 
 feat_levels <- c("coding", "leader", "rss", "intergenic")

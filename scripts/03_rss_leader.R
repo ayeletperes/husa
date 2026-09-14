@@ -3,10 +3,10 @@
 # RSS/leader variant seen in the in-house genomic cohort, with short spacers gap-aligned
 # to the canonical length and leaders repaired for known annotation artefacts.
 #
-#   results/rss_leader/rss_leader_iuis_data.csv.gz
+#   data/rss_leader/rss_leader_iuis_data.csv.gz
 
-source("R/00_setup.R")
-source("R/lib/rss_helpers.R")
+source("scripts/00_setup.R")
+source("scripts/lib/rss_helpers.R")
 suppressPackageStartupMessages({ library(stringi); library(Biostrings) })
 
 complement_reverse <- function(seqs) {
