@@ -1,0 +1,76 @@
+gene_type,specie,rss_sequence,order,color,underline,rss_tag,letter,position,order_update
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,1,1,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,1,1,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,1,1,6
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,1,1,7
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,3,1,8
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,3,1,9
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,3,1,10
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,3,1,11
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,8,1,12
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,1,1,4
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,1,1,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,1,1,6
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,1,1,7
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,2,1,8
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,2,1,9
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,2,1,10
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,2,1,11
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,3,1,12
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,1,1,6
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,1,1,7
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,1,1,8
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,2,1,9
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,2,1,10
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,2,1,11
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,4,1,12
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,6,1,4
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,7,1,5
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,9,1,6
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,11,1,7
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,14,1,8
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,27,1,9
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,31,1,10
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,34,1,11
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,91,1,12
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,1,1,8
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,1,1,9
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,1,1,10
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,1,1,11
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,4,1,12
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,3,1,4
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,3,1,5
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,4,1,6
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,6,1,7
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,6,1,8
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,7,1,9
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,7,1,10
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,12,1,11
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,32,1,12
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,1,1,7
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,1,1,8
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,2,1,9
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,2,1,10
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,3,1,11
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,4,1,12
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,4,1,4
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,5,1,5
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,5,1,6
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,5,1,7
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,8,1,8
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,10,1,9
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,12,1,10
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,14,1,11
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,15,1,12
+IGLV,human,                   ,1,single,no underline,.1,.,1,1
+IGLV,human,                   ,2,single,no underline,.2,.,1,2
+IGLV,human,                   ,3,single,no underline,.3,.,1,3
+IGKV,human,                   ,1,single,no underline,.1,.,1,1
+IGKV,human,                   ,2,single,no underline,.2,.,1,2
+IGKV,human,                   ,3,single,no underline,.3,.,1,3
+IGHD_3,human,                   ,1,single,no underline,.1,.,1,1
+IGHD_3,human,                   ,2,single,no underline,.2,.,1,2
+IGHD_3,human,                   ,3,single,no underline,.3,.,1,3
+IGHD_5,human,                   ,1,single,no underline,.1,.,1,1
+IGHD_5,human,                   ,2,single,no underline,.2,.,1,2
+IGHD_5,human,                   ,3,single,no underline,.3,.,1,3

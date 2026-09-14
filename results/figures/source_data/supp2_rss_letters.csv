@@ -1,0 +1,1426 @@
+gene_type,specie,rss_sequence,order,color,underline,rss_tag,letter,position,order_update
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,C,1,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,A,2,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,C,3,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,A,4,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,G,5,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,T,6,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,G,7,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,N,8,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,N,9,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,N,10,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,C,11,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,C,12,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,A,13,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,G,14,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,A,15,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,A,16,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,A,17,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,C,18,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,4,single,no underline,D11-2,C,19,4
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,C,1,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,A,2,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,C,3,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,A,4,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,G,5,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,T,6,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,G,7,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,N,8,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,N,9,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,N,10,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,C,11,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,C,12,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,A,13,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,G,14,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,A,15,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,A,16,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,A,17,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,C,18,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,5,single,no underline,D11-3,C,19,5
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,C,1,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,A,2,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,C,3,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,A,4,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,G,5,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,T,6,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,G,7,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,N,8,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,N,9,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,N,10,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,C,11,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,C,12,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,A,13,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,G,14,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,A,15,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,A,16,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,A,17,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,C,18,6
+IGHD_3,human,CACAGTGNNNCCAGAAACC,6,single,no underline,D11-4,C,19,6
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,C,1,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,A,2,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,C,3,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,A,4,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,G,5,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,T,6,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,G,7,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,N,8,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,N,9,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,N,10,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,G,11,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,C,12,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,A,13,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,G,14,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,C,15,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,A,16,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,A,17,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,C,18,7
+IGHD_3,human,CACAGTGNNNGCAGCAACC,7,single,no underline,D1-3,C,19,7
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,C,1,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,A,2,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,C,3,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,A,4,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,G,5,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,C,6,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,A,7,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,N,8,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,N,9,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,N,10,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,T,11,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,C,12,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,A,13,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,G,14,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,A,15,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,A,16,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,A,17,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,C,18,8
+IGHD_3,human,CACAGCANNNTCAGAAACC,8,single,no underline,D10-1,C,19,8
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,C,1,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,A,2,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,C,3,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,A,4,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,G,5,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,T,6,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,G,7,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,N,8,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,N,9,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,N,10,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,C,11,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,C,12,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,A,13,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,G,14,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,A,15,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,A,16,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,A,17,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,C,18,9
+IGHD_3,human,CACAGTGNNNCCAGAAACC,9,single,no underline,D11-1,C,19,9
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,C,1,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,A,2,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,C,3,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,A,4,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,G,5,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,T,6,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,G,7,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,N,8,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,N,9,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,N,10,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,G,11,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,C,12,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,A,13,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,G,14,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,C,15,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,A,16,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,A,17,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,C,18,10
+IGHD_3,human,CACAGTGNNNGCAGCAACC,10,single,no underline,D1-2,C,19,10
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,C,1,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,A,2,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,C,3,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,C,4,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,G,5,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,T,6,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,G,7,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,N,8,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,N,9,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,N,10,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,T,11,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,C,12,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,C,13,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,A,14,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,A,15,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,A,16,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,A,17,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,C,18,11
+IGHD_3,human,CACCGTGNNNTCCAAAACT,11,single,no underline,D12-1,T,19,11
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,C,1,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,A,2,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,C,3,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,A,4,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,G,5,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,T,6,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,G,7,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,N,8,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,N,9,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,N,10,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,G,11,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,C,12,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,A,13,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,G,14,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,C,15,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,A,16,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,A,17,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,C,18,12
+IGHD_3,human,CACAGTGNNNGCAGCAACC,12,single,no underline,D1-1,C,19,12
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,C,1,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,A,2,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,C,3,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,A,4,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,G,5,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,C,6,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,C,7,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,N,8,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,N,9,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,N,10,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,A,11,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,C,12,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,A,13,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,A,14,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,T,15,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,A,16,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,A,17,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,C,18,4
+IGHD_5,human,CACAGCCNNNACAATAACC,4,single,no underline,D29-1,C,19,4
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,C,1,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,2,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,C,3,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,4,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,G,5,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,T,6,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,7,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,N,8,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,N,9,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,N,10,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,11,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,C,12,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,13,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,14,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,15,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,16,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,A,17,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,G,18,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,5,single,no underline,D30-1,C,19,5
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,C,1,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,2,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,C,3,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,4,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,G,5,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,T,6,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,7,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,N,8,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,N,9,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,N,10,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,11,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,C,12,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,13,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,14,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,15,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,16,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,A,17,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,G,18,6
+IGHD_5,human,CACAGTANNNACAAAAAGC,6,single,no underline,D30-2,C,19,6
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,C,1,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,A,2,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,C,3,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,A,4,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,G,5,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,T,6,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,G,7,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,N,8,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,N,9,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,N,10,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,T,11,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,T,12,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,C,13,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,T,14,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,A,15,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,A,16,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,A,17,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,C,18,7
+IGHD_5,human,CACAGTGNNNTTCTAAACC,7,single,no underline,D31-1,C,19,7
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,C,1,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,A,2,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,C,3,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,A,4,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,G,5,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,T,6,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,C,7,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,N,8,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,N,9,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,N,10,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,A,11,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,C,12,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,G,13,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,A,14,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,T,15,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,A,16,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,A,17,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,C,18,8
+IGHD_5,human,CACAGTCNNNACGATAACC,8,single,no underline,D20-1,C,19,8
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,C,1,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,A,2,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,C,3,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,T,4,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,G,5,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,T,6,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,G,7,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,N,8,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,N,9,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,N,10,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,T,11,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,C,12,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,A,13,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,G,14,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,A,15,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,A,16,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,T,17,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,C,18,9
+IGHD_5,human,CACTGTGNNNTCAGAATCC,9,single,no underline,D21-1,C,19,9
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,C,1,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,G,2,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,C,3,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,T,4,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,G,5,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,T,6,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,G,7,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,N,8,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,N,9,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,N,10,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,T,11,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,C,12,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,G,13,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,G,14,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,A,15,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,A,16,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,T,17,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,C,18,10
+IGHD_5,human,CGCTGTGNNNTCGGAATCC,10,single,no underline,D22-1,C,19,10
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,G,1,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,A,2,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,C,3,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,T,4,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,G,5,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,C,6,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,G,7,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,N,8,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,N,9,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,N,10,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,T,11,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,C,12,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,A,13,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,G,14,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,A,15,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,A,16,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,A,17,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,C,18,11
+IGHD_5,human,GACTGCGNNNTCAGAAACC,11,single,no underline,D23-1,C,19,11
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,C,1,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,2,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,C,3,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,4,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,G,5,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,C,6,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,7,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,N,8,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,N,9,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,N,10,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,11,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,C,12,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,13,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,14,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,15,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,16,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,A,17,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,G,18,12
+IGHD_5,human,CACAGCANNNACAAAAAGC,12,single,no underline,D13-1,C,19,12
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,C,1,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,A,2,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,C,3,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,A,4,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,G,5,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,C,6,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,C,7,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,N,8,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,N,9,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,N,10,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,C,11,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,A,12,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,A,13,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,A,14,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,A,15,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,A,16,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,C,17,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,A,18,6
+IGHJ,human,CACAGCCNNNCAAAAACAC,1,single,no underline,J8-1,C,19,6
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,C,1,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,A,2,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,C,3,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,A,4,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,T,5,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,T,6,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,G,7,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,N,8,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,N,9,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,N,10,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,G,11,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,C,12,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,A,13,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,A,14,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,G,15,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,A,16,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,A,17,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,C,18,7
+IGHJ,human,CACATTGNNNGCAAGAACT,2,single,no underline,J9-1,T,19,7
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,C,1,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,A,2,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,C,3,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,G,4,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,G,5,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,T,6,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,G,7,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,N,8,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,N,9,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,N,10,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,C,11,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,A,12,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,G,13,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,A,14,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,A,15,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,A,16,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,C,17,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,C,18,8
+IGHJ,human,CACGGTGNNNCAGAAACCC,3,single,no underline,J10-1,C,19,8
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,C,1,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,A,2,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,C,3,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,A,4,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,G,5,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,G,6,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,G,7,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,N,8,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,N,9,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,N,10,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,A,11,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,C,12,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,A,13,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,C,14,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,A,15,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,A,16,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,A,17,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,C,18,9
+IGHJ,human,CACAGGGNNNACACAAACC,4,single,no underline,J4-1,C,19,9
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,C,1,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,A,2,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,C,3,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,A,4,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,G,5,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,G,6,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,G,7,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,N,8,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,N,9,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,N,10,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,A,11,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,C,12,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,A,13,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,T,14,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,A,15,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,A,16,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,A,17,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,C,18,10
+IGHJ,human,CACAGGGNNNACATAAACC,5,single,no underline,J5-1,C,19,10
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,C,1,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,A,2,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,C,3,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,A,4,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,T,5,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,T,6,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,G,7,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,N,8,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,N,9,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,N,10,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,A,11,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,C,12,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,A,13,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,A,14,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,A,15,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,A,16,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,A,17,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,C,18,11
+IGHJ,human,CACATTGNNNACAAAAACC,6,single,no underline,J6-1,C,19,11
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,C,1,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,A,2,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,C,3,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,A,4,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,A,5,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,T,6,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,G,7,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,N,8,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,N,9,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,N,10,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,C,11,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,A,12,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,A,13,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,A,14,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,A,15,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,A,16,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,C,17,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,C,18,12
+IGHJ,human,CACAATGNNNCAAAAACCC,7,single,no underline,J1-1,C,19,12
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,C,1,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,A,2,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,C,3,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,A,4,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,G,5,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,T,6,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,G,7,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,N,8,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,N,9,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,N,10,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,A,11,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,C,12,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,A,13,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,C,14,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,A,15,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,A,16,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,A,17,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,C,18,4
+IGHV,human,CACAGTGNNNACACAAACC,1,single,underline,V1-9,C,19,4
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,C,1,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,A,2,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,C,3,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,A,4,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,G,5,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,T,6,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,G,7,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,N,8,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,N,9,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,N,10,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,A,11,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,C,12,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,A,13,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,C,14,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,A,15,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,A,16,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,A,17,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,C,18,5
+IGHV,human,CACAGTGNNNACACAAACC,2,single,underline,V1-8,C,19,5
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,C,1,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,A,2,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,C,3,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,A,4,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,G,5,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,T,6,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,G,7,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,N,8,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,N,9,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,N,10,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,A,11,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,C,12,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,A,13,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,C,14,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,A,15,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,A,16,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,A,17,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,C,18,6
+IGHV,human,CACAGTGNNNACACAAACC,3,single,underline,V1-7,C,19,6
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,C,1,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,A,2,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,C,3,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,A,4,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,G,5,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,T,6,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,G,7,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,N,8,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,N,9,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,N,10,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,A,11,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,C,12,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,A,13,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,C,14,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,A,15,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,A,16,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,A,17,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,C,18,7
+IGHV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-6,C,19,7
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,C,1,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,A,2,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,C,3,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,A,4,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,G,5,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,T,6,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,G,7,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,N,8,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,N,9,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,N,10,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,A,11,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,C,12,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,A,13,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,C,14,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,A,15,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,A,16,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,A,17,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,C,18,8
+IGHV,human,CACAGTGNNNACACAAACC,5,single,underline,V1-5,C,19,8
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,C,1,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,A,2,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,C,3,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,A,4,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,G,5,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,T,6,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,G,7,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,N,8,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,N,9,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,N,10,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,A,11,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,C,12,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,A,13,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,C,14,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,A,15,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,A,16,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,A,17,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,C,18,9
+IGHV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-4,C,19,9
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,C,1,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,A,2,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,C,3,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,A,4,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,G,5,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,T,6,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,G,7,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,N,8,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,N,9,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,N,10,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,A,11,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,C,12,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,A,13,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,C,14,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,A,15,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,A,16,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,A,17,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,C,18,10
+IGHV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-3,C,19,10
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,C,1,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,A,2,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,C,3,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,A,4,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,G,5,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,T,6,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,G,7,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,N,8,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,N,9,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,N,10,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,A,11,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,C,12,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,A,13,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,C,14,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,A,15,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,A,16,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,A,17,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,C,18,11
+IGHV,human,CACAGTGNNNACACAAACC,8,single,underline,V1-2,C,19,11
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,C,1,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,A,2,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,C,3,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,A,4,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,G,5,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,T,6,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,G,7,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,N,8,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,N,9,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,N,10,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,A,11,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,C,12,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,A,13,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,C,14,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,A,15,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,A,16,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,A,17,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,C,18,12
+IGHV,human,CACAGTGNNNACACAAACC,9,single,underline,V1-1,C,19,12
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,C,1,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,A,2,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,C,3,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,A,4,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,G,5,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,T,6,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,G,7,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,N,8,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,N,9,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,N,10,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,A,11,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,C,12,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,A,13,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,A,14,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,A,15,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,A,16,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,A,17,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,C,18,8
+IGKJ,human,CACAGTGNNNACAAAAACC,1,single,underline,V6-18,C,19,8
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,C,1,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,A,2,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,C,3,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,A,4,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,G,5,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,T,6,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,G,7,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,N,8,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,N,9,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,N,10,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,A,11,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,C,12,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,A,13,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,A,14,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,A,15,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,A,16,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,A,17,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,C,18,9
+IGKJ,human,CACAGTGNNNACAAAAACC,2,single,underline,V6-19,C,19,9
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,C,1,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,A,2,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,C,3,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,A,4,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,G,5,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,T,6,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,G,7,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,N,8,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,N,9,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,N,10,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,A,11,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,C,12,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,A,13,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,A,14,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,A,15,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,A,16,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,A,17,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,T,18,10
+IGKJ,human,CACAGTGNNNACAAAAATC,3,single,no underline,J11-1,C,19,10
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,C,1,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,A,2,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,C,3,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,A,4,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,G,5,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,T,6,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,G,7,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,N,8,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,N,9,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,N,10,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,C,11,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,A,12,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,A,13,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,A,14,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,A,15,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,A,16,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,C,17,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,C,18,11
+IGKJ,human,CACAGTGNNNCAAAAACCT,4,single,underline,V27-2,T,19,11
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,C,1,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,2,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,C,3,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,4,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,5,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,T,6,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,G,7,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,N,8,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,N,9,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,N,10,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,11,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,C,12,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,13,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,14,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,15,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,16,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,A,17,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,C,18,12
+IGKJ,human,CACAATGNNNACAAAAACT,5,single,no underline,J2-1,T,19,12
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,C,1,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,A,2,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,C,3,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,A,4,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,G,5,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,A,6,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,G,7,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,N,8,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,N,9,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,N,10,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,A,11,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,C,12,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,A,13,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,G,14,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,A,15,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,A,16,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,A,17,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,C,18,4
+IGKV,human,CACAGAGNNNACAGAAACC,4,single,no underline,V37-1,C,19,4
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,C,1,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,A,2,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,C,3,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,A,4,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,G,5,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,T,6,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,G,7,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,N,8,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,N,9,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,N,10,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,A,11,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,C,12,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,A,13,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,T,14,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,A,15,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,A,16,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,A,17,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,T,18,5
+IGKV,human,CACAGTGNNNACATAAATC,5,single,no underline,V38-1,C,19,5
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,C,1,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,A,2,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,C,3,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,A,4,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,G,5,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,T,6,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,G,7,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,N,8,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,N,9,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,N,10,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,A,11,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,C,12,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,A,13,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,C,14,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,A,15,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,A,16,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,A,17,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,C,18,6
+IGKV,human,CACAGTGNNNACACAAACC,6,single,underline,V1-13,C,19,6
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,C,1,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,A,2,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,C,3,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,A,4,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,G,5,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,T,6,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,G,7,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,N,8,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,N,9,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,N,10,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,G,11,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,C,12,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,A,13,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,C,14,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,A,15,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,A,16,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,A,17,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,C,18,7
+IGKV,human,CACAGTGNNNGCACAAACC,7,single,no underline,V21-1,C,19,7
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,C,1,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,A,2,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,C,3,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,T,4,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,G,5,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,T,6,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,G,7,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,N,8,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,N,9,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,N,10,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,A,11,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,C,12,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,A,13,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,A,14,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,A,15,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,A,16,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,A,17,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,C,18,8
+IGKV,human,CACTGTGNNNACAAAAACT,8,single,no underline,V22-1,T,19,8
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,C,1,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,A,2,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,C,3,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,A,4,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,G,5,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,T,6,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,G,7,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,N,8,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,N,9,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,N,10,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,A,11,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,C,12,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,A,13,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,G,14,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,A,15,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,A,16,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,A,17,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,C,18,9
+IGKV,human,CACAGTGNNNACAGAAACC,9,single,underline,V4-3,C,19,9
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,C,1,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,A,2,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,T,3,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,A,4,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,G,5,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,T,6,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,G,7,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,N,8,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,N,9,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,N,10,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,A,11,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,C,12,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,A,13,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,T,14,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,A,15,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,A,16,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,A,17,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,C,18,10
+IGKV,human,CATAGTGNNNACATAAACC,10,single,no underline,V19-1,C,19,10
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,C,1,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,A,2,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,C,3,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,A,4,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,G,5,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,T,6,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,G,7,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,N,8,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,N,9,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,N,10,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,A,11,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,C,12,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,A,13,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,G,14,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,A,15,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,A,16,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,A,17,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,C,18,11
+IGKV,human,CACAGTGNNNACAGAAACC,11,single,underline,V4-2,C,19,11
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,C,1,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,A,2,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,C,3,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,A,4,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,G,5,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,T,6,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,G,7,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,N,8,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,N,9,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,N,10,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,A,11,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,C,12,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,A,13,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,G,14,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,A,15,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,A,16,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,A,17,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,C,18,12
+IGKV,human,CACAGTGNNNACAGAAACC,12,single,underline,V4-1,C,19,12
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,C,1,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,A,2,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,C,3,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,A,4,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,G,5,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,T,6,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,G,7,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,N,8,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,N,9,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,N,10,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,A,11,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,C,12,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,C,13,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,A,14,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,A,15,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,A,16,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,A,17,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,C,18,7
+IGLJ,human,CACAGTGNNNACCAAAACC,1,single,underline,V10-3,C,19,7
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,C,1,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,A,2,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,C,3,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,T,4,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,G,5,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,T,6,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,G,7,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,N,8,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,N,9,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,N,10,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,A,11,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,C,12,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,A,13,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,C,14,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,A,15,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,A,16,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,A,17,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,C,18,8
+IGLJ,human,CACTGTGNNNACACAAACC,2,single,underline,V36-3,C,19,8
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,C,1,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,A,2,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,C,3,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,A,4,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,G,5,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,T,6,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,G,7,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,N,8,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,N,9,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,N,10,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,A,11,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,C,12,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,A,13,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,C,14,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,A,15,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,A,16,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,A,17,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,C,18,9
+IGLJ,human,CACAGTGNNNACACAAACC,3,single,underline,V1-17,C,19,9
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,C,1,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,A,2,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,C,3,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,T,4,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,G,5,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,T,6,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,G,7,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,N,8,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,N,9,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,N,10,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,A,11,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,C,12,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,A,13,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,A,14,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,A,15,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,A,16,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,G,17,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,C,18,10
+IGLJ,human,CACTGTGNNNACAAAAGCC,4,single,no underline,J7-1,C,19,10
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,C,1,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,A,2,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,C,3,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,A,4,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,G,5,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,T,6,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,G,7,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,N,8,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,N,9,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,N,10,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,A,11,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,C,12,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,A,13,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,C,14,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,A,15,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,A,16,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,A,17,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,C,18,11
+IGLJ,human,CACAGTGNNNACACAAACC,5,single,underline,V1-15,C,19,11
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,C,1,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,A,2,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,C,3,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,T,4,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,G,5,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,T,6,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,G,7,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,N,8,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,N,9,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,N,10,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,A,11,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,C,12,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,A,13,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,A,14,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,A,15,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,A,16,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,A,17,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,C,18,12
+IGLJ,human,CACTGTGNNNACAAAAACC,6,single,no underline,J3-1,C,19,12
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,C,1,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,A,2,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,C,3,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,A,4,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,G,5,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,T,6,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,G,7,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,N,8,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,N,9,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,N,10,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,A,11,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,C,12,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,A,13,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,C,14,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,A,15,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,A,16,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,A,17,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,C,18,4
+IGLV,human,CACAGTGNNNACACAAACC,4,single,underline,V1-14,C,19,4
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,C,1,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,A,2,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,C,3,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,A,4,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,G,5,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,T,6,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,G,7,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,N,8,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,N,9,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,N,10,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,A,11,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,C,12,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,A,13,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,A,14,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,G,15,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,A,16,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,A,17,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,C,18,5
+IGLV,human,CACAGTGNNNACAAGAACC,5,single,no underline,V12-4,C,19,5
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,C,1,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,A,2,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,C,3,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,A,4,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,G,5,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,T,6,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,G,7,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,N,8,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,N,9,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,N,10,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,A,11,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,C,12,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,A,13,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,A,14,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,G,15,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,A,16,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,A,17,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,C,18,6
+IGLV,human,CACAGTGNNNACAAGAACC,6,single,no underline,V12-5,C,19,6
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,C,1,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,A,2,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,C,3,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,A,4,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,G,5,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,T,6,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,G,7,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,N,8,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,N,9,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,N,10,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,A,11,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,C,12,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,A,13,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,C,14,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,A,15,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,A,16,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,A,17,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,C,18,7
+IGLV,human,CACAGTGNNNACACAAACC,7,single,underline,V1-11,C,19,7
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,C,1,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,A,2,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,C,3,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,A,4,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,G,5,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,T,6,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,G,7,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,N,8,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,N,9,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,N,10,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,A,11,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,C,12,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,A,13,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,A,14,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,G,15,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,A,16,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,A,17,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,C,18,8
+IGLV,human,CACAGTGNNNACAAGAACC,8,single,no underline,V12-3,C,19,8
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,C,1,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,A,2,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,C,3,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,A,4,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,G,5,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,T,6,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,G,7,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,N,8,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,N,9,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,N,10,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,A,11,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,C,12,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,C,13,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,A,14,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,A,15,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,A,16,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,A,17,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,C,18,9
+IGLV,human,CACAGTGNNNACCAAAACC,9,single,underline,V10-2,C,19,9
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,C,1,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,A,2,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,C,3,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,A,4,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,G,5,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,T,6,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,G,7,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,N,8,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,N,9,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,N,10,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,A,11,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,C,12,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,A,13,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,A,14,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,G,15,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,A,16,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,A,17,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,C,18,10
+IGLV,human,CACAGTGNNNACAAGAACC,10,single,no underline,V12-2,C,19,10
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,C,1,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,A,2,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,C,3,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,A,4,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,G,5,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,T,6,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,G,7,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,N,8,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,N,9,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,N,10,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,A,11,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,C,12,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,A,13,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,A,14,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,G,15,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,A,16,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,A,17,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,C,18,11
+IGLV,human,CACAGTGNNNACAAGAACC,11,single,no underline,V12-1,C,19,11
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,C,1,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,A,2,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,C,3,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,A,4,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,G,5,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,T,6,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,G,7,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,N,8,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,N,9,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,N,10,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,A,11,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,C,12,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,C,13,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,A,14,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,A,15,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,A,16,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,A,17,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,C,18,12
+IGLV,human,CACAGTGNNNACCAAAACC,12,single,underline,V10-1,C,19,12
+IGLV,human,                   ,1,single,no underline,.1, ,1,1
+IGLV,human,                   ,1,single,no underline,.1, ,2,1
+IGLV,human,                   ,1,single,no underline,.1, ,3,1
+IGLV,human,                   ,1,single,no underline,.1, ,4,1
+IGLV,human,                   ,1,single,no underline,.1, ,5,1
+IGLV,human,                   ,1,single,no underline,.1, ,6,1
+IGLV,human,                   ,1,single,no underline,.1, ,7,1
+IGLV,human,                   ,1,single,no underline,.1, ,8,1
+IGLV,human,                   ,1,single,no underline,.1, ,9,1
+IGLV,human,                   ,1,single,no underline,.1, ,10,1
+IGLV,human,                   ,1,single,no underline,.1, ,11,1
+IGLV,human,                   ,1,single,no underline,.1, ,12,1
+IGLV,human,                   ,1,single,no underline,.1, ,13,1
+IGLV,human,                   ,1,single,no underline,.1, ,14,1
+IGLV,human,                   ,1,single,no underline,.1, ,15,1
+IGLV,human,                   ,1,single,no underline,.1, ,16,1
+IGLV,human,                   ,1,single,no underline,.1, ,17,1
+IGLV,human,                   ,1,single,no underline,.1, ,18,1
+IGLV,human,                   ,1,single,no underline,.1, ,19,1
+IGLV,human,                   ,2,single,no underline,.2, ,1,2
+IGLV,human,                   ,2,single,no underline,.2, ,2,2
+IGLV,human,                   ,2,single,no underline,.2, ,3,2
+IGLV,human,                   ,2,single,no underline,.2, ,4,2
+IGLV,human,                   ,2,single,no underline,.2, ,5,2
+IGLV,human,                   ,2,single,no underline,.2, ,6,2
+IGLV,human,                   ,2,single,no underline,.2, ,7,2
+IGLV,human,                   ,2,single,no underline,.2, ,8,2
+IGLV,human,                   ,2,single,no underline,.2, ,9,2
+IGLV,human,                   ,2,single,no underline,.2, ,10,2
+IGLV,human,                   ,2,single,no underline,.2, ,11,2
+IGLV,human,                   ,2,single,no underline,.2, ,12,2
+IGLV,human,                   ,2,single,no underline,.2, ,13,2
+IGLV,human,                   ,2,single,no underline,.2, ,14,2
+IGLV,human,                   ,2,single,no underline,.2, ,15,2
+IGLV,human,                   ,2,single,no underline,.2, ,16,2
+IGLV,human,                   ,2,single,no underline,.2, ,17,2
+IGLV,human,                   ,2,single,no underline,.2, ,18,2
+IGLV,human,                   ,2,single,no underline,.2, ,19,2
+IGLV,human,                   ,3,single,no underline,.3, ,1,3
+IGLV,human,                   ,3,single,no underline,.3, ,2,3
+IGLV,human,                   ,3,single,no underline,.3, ,3,3
+IGLV,human,                   ,3,single,no underline,.3, ,4,3
+IGLV,human,                   ,3,single,no underline,.3, ,5,3
+IGLV,human,                   ,3,single,no underline,.3, ,6,3
+IGLV,human,                   ,3,single,no underline,.3, ,7,3
+IGLV,human,                   ,3,single,no underline,.3, ,8,3
+IGLV,human,                   ,3,single,no underline,.3, ,9,3
+IGLV,human,                   ,3,single,no underline,.3, ,10,3
+IGLV,human,                   ,3,single,no underline,.3, ,11,3
+IGLV,human,                   ,3,single,no underline,.3, ,12,3
+IGLV,human,                   ,3,single,no underline,.3, ,13,3
+IGLV,human,                   ,3,single,no underline,.3, ,14,3
+IGLV,human,                   ,3,single,no underline,.3, ,15,3
+IGLV,human,                   ,3,single,no underline,.3, ,16,3
+IGLV,human,                   ,3,single,no underline,.3, ,17,3
+IGLV,human,                   ,3,single,no underline,.3, ,18,3
+IGLV,human,                   ,3,single,no underline,.3, ,19,3
+IGKV,human,                   ,1,single,no underline,.1, ,1,1
+IGKV,human,                   ,1,single,no underline,.1, ,2,1
+IGKV,human,                   ,1,single,no underline,.1, ,3,1
+IGKV,human,                   ,1,single,no underline,.1, ,4,1
+IGKV,human,                   ,1,single,no underline,.1, ,5,1
+IGKV,human,                   ,1,single,no underline,.1, ,6,1
+IGKV,human,                   ,1,single,no underline,.1, ,7,1
+IGKV,human,                   ,1,single,no underline,.1, ,8,1
+IGKV,human,                   ,1,single,no underline,.1, ,9,1
+IGKV,human,                   ,1,single,no underline,.1, ,10,1
+IGKV,human,                   ,1,single,no underline,.1, ,11,1
+IGKV,human,                   ,1,single,no underline,.1, ,12,1
+IGKV,human,                   ,1,single,no underline,.1, ,13,1
+IGKV,human,                   ,1,single,no underline,.1, ,14,1
+IGKV,human,                   ,1,single,no underline,.1, ,15,1
+IGKV,human,                   ,1,single,no underline,.1, ,16,1
+IGKV,human,                   ,1,single,no underline,.1, ,17,1
+IGKV,human,                   ,1,single,no underline,.1, ,18,1
+IGKV,human,                   ,1,single,no underline,.1, ,19,1
+IGKV,human,                   ,2,single,no underline,.2, ,1,2
+IGKV,human,                   ,2,single,no underline,.2, ,2,2
+IGKV,human,                   ,2,single,no underline,.2, ,3,2
+IGKV,human,                   ,2,single,no underline,.2, ,4,2
+IGKV,human,                   ,2,single,no underline,.2, ,5,2
+IGKV,human,                   ,2,single,no underline,.2, ,6,2
+IGKV,human,                   ,2,single,no underline,.2, ,7,2
+IGKV,human,                   ,2,single,no underline,.2, ,8,2
+IGKV,human,                   ,2,single,no underline,.2, ,9,2
+IGKV,human,                   ,2,single,no underline,.2, ,10,2
+IGKV,human,                   ,2,single,no underline,.2, ,11,2
+IGKV,human,                   ,2,single,no underline,.2, ,12,2
+IGKV,human,                   ,2,single,no underline,.2, ,13,2
+IGKV,human,                   ,2,single,no underline,.2, ,14,2
+IGKV,human,                   ,2,single,no underline,.2, ,15,2
+IGKV,human,                   ,2,single,no underline,.2, ,16,2
+IGKV,human,                   ,2,single,no underline,.2, ,17,2
+IGKV,human,                   ,2,single,no underline,.2, ,18,2
+IGKV,human,                   ,2,single,no underline,.2, ,19,2
+IGKV,human,                   ,3,single,no underline,.3, ,1,3
+IGKV,human,                   ,3,single,no underline,.3, ,2,3
+IGKV,human,                   ,3,single,no underline,.3, ,3,3
+IGKV,human,                   ,3,single,no underline,.3, ,4,3
+IGKV,human,                   ,3,single,no underline,.3, ,5,3
+IGKV,human,                   ,3,single,no underline,.3, ,6,3
+IGKV,human,                   ,3,single,no underline,.3, ,7,3
+IGKV,human,                   ,3,single,no underline,.3, ,8,3
+IGKV,human,                   ,3,single,no underline,.3, ,9,3
+IGKV,human,                   ,3,single,no underline,.3, ,10,3
+IGKV,human,                   ,3,single,no underline,.3, ,11,3
+IGKV,human,                   ,3,single,no underline,.3, ,12,3
+IGKV,human,                   ,3,single,no underline,.3, ,13,3
+IGKV,human,                   ,3,single,no underline,.3, ,14,3
+IGKV,human,                   ,3,single,no underline,.3, ,15,3
+IGKV,human,                   ,3,single,no underline,.3, ,16,3
+IGKV,human,                   ,3,single,no underline,.3, ,17,3
+IGKV,human,                   ,3,single,no underline,.3, ,18,3
+IGKV,human,                   ,3,single,no underline,.3, ,19,3
+IGHD_3,human,                   ,1,single,no underline,.1, ,1,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,2,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,3,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,4,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,5,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,6,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,7,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,8,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,9,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,10,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,11,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,12,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,13,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,14,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,15,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,16,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,17,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,18,1
+IGHD_3,human,                   ,1,single,no underline,.1, ,19,1
+IGHD_3,human,                   ,2,single,no underline,.2, ,1,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,2,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,3,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,4,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,5,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,6,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,7,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,8,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,9,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,10,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,11,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,12,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,13,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,14,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,15,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,16,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,17,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,18,2
+IGHD_3,human,                   ,2,single,no underline,.2, ,19,2
+IGHD_3,human,                   ,3,single,no underline,.3, ,1,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,2,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,3,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,4,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,5,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,6,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,7,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,8,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,9,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,10,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,11,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,12,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,13,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,14,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,15,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,16,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,17,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,18,3
+IGHD_3,human,                   ,3,single,no underline,.3, ,19,3
+IGHD_5,human,                   ,1,single,no underline,.1, ,1,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,2,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,3,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,4,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,5,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,6,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,7,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,8,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,9,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,10,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,11,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,12,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,13,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,14,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,15,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,16,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,17,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,18,1
+IGHD_5,human,                   ,1,single,no underline,.1, ,19,1
+IGHD_5,human,                   ,2,single,no underline,.2, ,1,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,2,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,3,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,4,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,5,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,6,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,7,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,8,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,9,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,10,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,11,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,12,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,13,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,14,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,15,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,16,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,17,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,18,2
+IGHD_5,human,                   ,2,single,no underline,.2, ,19,2
+IGHD_5,human,                   ,3,single,no underline,.3, ,1,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,2,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,3,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,4,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,5,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,6,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,7,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,8,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,9,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,10,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,11,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,12,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,13,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,14,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,15,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,16,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,17,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,18,3
+IGHD_5,human,                   ,3,single,no underline,.3, ,19,3

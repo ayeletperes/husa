@@ -2,14 +2,22 @@
 # IGHD/IGHJ pairing figure. A: P(J|D) per subject by IGHJ ASC, coloured by IGHD ASC, over
 # the Spearman heatmap of the D rank orders. B: P(D|J), the mirror. C: the same conditional
 # split by genotype at the strongest pairing QTL, with its marginals.
+# Tables are computed only when missing from results/figures/source_data; the figure is
+# always drawn from them.
 
 source("R/00_setup.R")
 source("R/lib/dj_pairing.R")
-suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot); library(seriation) })
+suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot) })
 
 # igh_37391 is the lowest p value in the enrichment MANOVA (J4 anchored); igh_38679 ties with it in
 # perfect linkage disequilibrium.
 variant <- "igh_37391"
+tables <- file.path(OUT$source, c("dj_pairing_probabilities.csv.gz", "dj_pairing_correlations.csv.gz", "dj_pairing_axis_levels.csv",
+                                  "dj_snp_pj.csv.gz", "dj_snp_pd.csv.gz", "dj_snp_pjd.csv.gz", "dj_snp_stats.tsv"))
+names(tables) <- c("prob", "corr", "levels", "pj", "pd", "pjd", "stats")
+
+if (!all(file.exists(tables))) {
+library(seriation)
 qtl <- file.path(OUT$qtl, "source_data")
 
 # ---- A and B: pairing bias ----
@@ -56,18 +64,23 @@ pjd <- merge(pjd, cells, by = c("variant", "d_gene", "j_gene"))
 stats <- fread(file.path(qtl, "pairing_associations.tsv.gz"))[variant == v][order(p_value)]
 print(stats[, .(variant, j_gene, n, pillai, p_value, min_genotype_group, significant)], class = FALSE)
 
-fwrite(prob, file.path(OUT$source, "dj_pairing_probabilities.csv.gz"))
-fwrite(rbind(corr_jd, corr_dj), file.path(OUT$source, "dj_pairing_correlations.csv.gz"))
+fwrite(prob, tables[["prob"]])
+fwrite(rbind(corr_jd, corr_dj), tables[["corr"]])
 fwrite(rbind(data.table(axis = "IGHD", short_label = d_short, plot_order = seq_along(d_short)),
-             data.table(axis = "IGHJ", short_label = j_short, plot_order = seq_along(j_short))), file.path(OUT$source, "dj_pairing_axis_levels.csv"))
-fwrite(pj, file.path(OUT$source, "dj_snp_pj.csv.gz"))
-fwrite(pd, file.path(OUT$source, "dj_snp_pd.csv.gz"))
-fwrite(pjd, file.path(OUT$source, "dj_snp_pjd.csv.gz"))
-fwrite(stats, file.path(OUT$source, "dj_snp_stats.tsv"), sep = "\t")
+             data.table(axis = "IGHJ", short_label = j_short, plot_order = seq_along(j_short))), tables[["levels"]])
+fwrite(pj, tables[["pj"]]); fwrite(pd, tables[["pd"]]); fwrite(pjd, tables[["pjd"]])
+fwrite(stats, tables[["stats"]], sep = "\t")
+}
 
 # ---- draw ----
+axis_levels <- fread(tables[["levels"]])
+d_short <- gsub("^IGH", "", axis_levels[axis == "IGHD"][order(plot_order), short_label])
+j_short <- gsub("^IGH", "", axis_levels[axis == "IGHJ"][order(plot_order), short_label])
+prob <- fread(tables[["prob"]]); corr <- fread(tables[["corr"]])
+corr_jd <- corr[direction == "P(J|D)"]; corr_dj <- corr[direction == "P(D|J)"]
+pj <- fread(tables[["pj"]]); pd <- fread(tables[["pd"]]); pjd <- fread(tables[["pjd"]])
+variant <- pjd$variant[1L]
 geno_cols <- c(`0/0` = "#2a78d6", `0/1` = "#e34948", `1/1` = "#eda100")
-d_short <- gsub("^IGH", "", d_short); j_short <- gsub("^IGH", "", j_short)
 prob[, gene_a_short := factor(gsub("^IGH", "", as.character(gene_a_short)), levels = d_short)]
 prob[, gene_b_short := factor(gsub("^IGH", "", as.character(gene_b_short)), levels = j_short)]
 p_jd <- build_probability_boxplot(prob[, .(subject, gene_a_short, gene_b_short, probability_value = p_b_given_a, custom_order = order_j_given_d)],

@@ -2,65 +2,73 @@
 # Supplementary figure 1: Baseline / HUSA / IMGT sequence-set Venn per segment. Membership
 # is exact sequence equality after degapping and uppercasing; IMGT is restricted to F/ORF
 # alleles of genes present in HUSA (compared in the IMGT name space, via the husa column).
+# Tables are computed only when missing from results/figures/source_data; the figure is
+# always drawn from them.
 
 source("R/00_setup.R")
-suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(Biostrings); library(alakazam); library(ggVennDiagram); library(ggvenn) })
+suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(ggVennDiagram); library(ggvenn) })
 
 segments <- c("IGHV", "IGHD", "IGHJ", "IGKV", "IGKJ", "IGLV", "IGLJ")
-degap <- function(x) toupper(gsub("[.-]", "", as.character(x)))
-join_alleles <- function(x) paste(sort(unique(x)), collapse = ",")
+tables <- file.path(OUT$source, c("supp1_sequence_membership.csv", "supp1_overlap_counts.csv", "supp1_gene_attribution_notes.csv"))
 
-husa <- fread(need(file.path(OUT$husa, "husa.tsv")))[chain %in% CHAINS & gene_type %in% segments]
-husa[, seq_norm := degap(seq)]
-husa <- husa[!is.na(seq_norm) & nzchar(seq_norm)]
-husa[, husa_gene := getGene(husa, first = TRUE, strip_d = FALSE, omit_nl = FALSE)]
-husa[, in_baseline := as.logical(in_baseline_reference)]
-husa[is.na(in_baseline), in_baseline := FALSE]
-husa_genes <- unique(trimws(unlist(strsplit(getGene(husa$husa, first = FALSE, strip_d = FALSE, omit_nl = FALSE), ",", fixed = TRUE))))
+if (!all(file.exists(tables))) {
+  suppressPackageStartupMessages({ library(Biostrings); library(alakazam) })
+  degap <- function(x) toupper(gsub("[.-]", "", as.character(x)))
+  join_alleles <- function(x) paste(sort(unique(x)), collapse = ",")
 
-imgt <- rbindlist(lapply(segments, function(seg) {
-  dss <- readDNAStringSet(need(file.path(IN$imgt_vdj, sprintf("imgt_human_%s.fasta", seg))))
-  parts <- strsplit(names(dss), "|", fixed = TRUE)
-  data.table(gene_type = seg,
-             allele = vapply(parts, function(p) if (length(p) >= 2L) p[[2]] else NA_character_, character(1)),
-             functional = gsub("[][()]", "", vapply(parts, function(p) if (length(p) >= 4L) p[[4]] else NA_character_, character(1))),
-             seq_norm = degap(dss))
-}))[!is.na(allele) & nzchar(allele) & !is.na(seq_norm) & nzchar(seq_norm)]
-imgt[, gene := getGene(allele, first = TRUE, strip_d = FALSE, omit_nl = FALSE)]
-imgt_full <- imgt[functional %in% c("F", "ORF")]
-imgt_inscope <- imgt_full[gene %in% husa_genes]
+  husa <- fread(need(file.path(OUT$husa, "husa.tsv")))[chain %in% CHAINS & gene_type %in% segments]
+  husa[, seq_norm := degap(seq)]
+  husa <- husa[!is.na(seq_norm) & nzchar(seq_norm)]
+  husa[, husa_gene := getGene(husa, first = TRUE, strip_d = FALSE, omit_nl = FALSE)]
+  husa[, in_baseline := as.logical(in_baseline_reference)]
+  husa[is.na(in_baseline), in_baseline := FALSE]
+  husa_genes <- unique(trimws(unlist(strsplit(getGene(husa$husa, first = FALSE, strip_d = FALSE, omit_nl = FALSE), ",", fixed = TRUE))))
 
-membership <- Reduce(function(x, y) merge(x, y, by = c("gene_type", "seq_norm"), all = TRUE), list(
-  husa[in_baseline == TRUE, .(baseline_alleles = join_alleles(allele)), by = .(gene_type, seq_norm)],
-  husa[, .(husa_alleles = join_alleles(allele)), by = .(gene_type, seq_norm)],
-  imgt_inscope[, .(imgt_alleles = join_alleles(allele)), by = .(gene_type, seq_norm)]))
-membership[, `:=`(in_baseline = !is.na(baseline_alleles), in_husa = !is.na(husa_alleles), in_imgt = !is.na(imgt_alleles))]
-for (col in c("baseline_alleles", "husa_alleles", "imgt_alleles")) membership[is.na(get(col)), (col) := ""]
-setorder(membership, gene_type, -in_baseline, -in_husa, -in_imgt, seq_norm)
+  imgt <- rbindlist(lapply(segments, function(seg) {
+    dss <- readDNAStringSet(need(file.path(IN$imgt_vdj, sprintf("imgt_human_%s.fasta", seg))))
+    parts <- strsplit(names(dss), "|", fixed = TRUE)
+    data.table(gene_type = seg,
+               allele = vapply(parts, function(p) if (length(p) >= 2L) p[[2]] else NA_character_, character(1)),
+               functional = gsub("[][()]", "", vapply(parts, function(p) if (length(p) >= 4L) p[[4]] else NA_character_, character(1))),
+               seq_norm = degap(dss))
+  }))[!is.na(allele) & nzchar(allele) & !is.na(seq_norm) & nzchar(seq_norm)]
+  imgt[, gene := getGene(allele, first = TRUE, strip_d = FALSE, omit_nl = FALSE)]
+  imgt_full <- imgt[functional %in% c("F", "ORF")]
+  imgt_inscope <- imgt_full[gene %in% husa_genes]
 
-overlap_counts <- membership[, .(
-  n_baseline_only = sum(in_baseline & !in_husa & !in_imgt), n_husa_only = sum(!in_baseline & in_husa & !in_imgt),
-  n_imgt_only = sum(!in_baseline & !in_husa & in_imgt), n_baseline_husa = sum(in_baseline & in_husa & !in_imgt),
-  n_baseline_imgt = sum(in_baseline & !in_husa & in_imgt), n_husa_imgt = sum(!in_baseline & in_husa & in_imgt),
-  n_all_three = sum(in_baseline & in_husa & in_imgt), n_baseline_total = sum(in_baseline), n_husa_total = sum(in_husa),
-  n_imgt_in_scope_total = sum(in_imgt), n_husa_novel = sum(in_husa & !in_baseline),
-  n_husa_novel_in_imgt = sum(in_husa & !in_baseline & in_imgt), n_husa_novel_not_imgt = sum(in_husa & !in_baseline & !in_imgt)
-), by = gene_type]
-overlap_counts <- merge(data.table(gene_type = segments), overlap_counts, by = "gene_type", all.x = TRUE)
-for (col in setdiff(names(overlap_counts), "gene_type")) overlap_counts[is.na(get(col)), (col) := 0L]
-overlap_counts <- overlap_counts[order(factor(gene_type, levels = segments))]
-print(overlap_counts)
+  membership <- Reduce(function(x, y) merge(x, y, by = c("gene_type", "seq_norm"), all = TRUE), list(
+    husa[in_baseline == TRUE, .(baseline_alleles = join_alleles(allele)), by = .(gene_type, seq_norm)],
+    husa[, .(husa_alleles = join_alleles(allele)), by = .(gene_type, seq_norm)],
+    imgt_inscope[, .(imgt_alleles = join_alleles(allele)), by = .(gene_type, seq_norm)]))
+  membership[, `:=`(in_baseline = !is.na(baseline_alleles), in_husa = !is.na(husa_alleles), in_imgt = !is.na(imgt_alleles))]
+  for (col in c("baseline_alleles", "husa_alleles", "imgt_alleles")) membership[is.na(get(col)), (col) := ""]
+  setorder(membership, gene_type, -in_baseline, -in_husa, -in_imgt, seq_norm)
 
-# HUSA-only sequences that IMGT does know under a gene absent from HUSA.
-husa_only <- merge(unique(husa[, .(allele, husa_gene, gene_type, seq_norm)]), membership[in_husa & !in_imgt, .(gene_type, seq_norm)], by = c("gene_type", "seq_norm"))
-flagged <- merge(husa_only, imgt_full[, .(imgt_alleles = join_alleles(allele), imgt_genes = join_alleles(gene)), by = .(gene_type, seq_norm)], by = c("gene_type", "seq_norm"))
-if (nrow(flagged)) flagged <- flagged[vapply(imgt_genes, function(gs) !any(trimws(unlist(strsplit(gs, ",", fixed = TRUE))) %in% husa_genes), logical(1))]
-flagged <- flagged[, .(husa_allele = allele, husa_gene, gene_type, seq_norm, imgt_alleles, imgt_genes)][order(gene_type, husa_allele)]
+  overlap_counts <- membership[, .(
+    n_baseline_only = sum(in_baseline & !in_husa & !in_imgt), n_husa_only = sum(!in_baseline & in_husa & !in_imgt),
+    n_imgt_only = sum(!in_baseline & !in_husa & in_imgt), n_baseline_husa = sum(in_baseline & in_husa & !in_imgt),
+    n_baseline_imgt = sum(in_baseline & !in_husa & in_imgt), n_husa_imgt = sum(!in_baseline & in_husa & in_imgt),
+    n_all_three = sum(in_baseline & in_husa & in_imgt), n_baseline_total = sum(in_baseline), n_husa_total = sum(in_husa),
+    n_imgt_in_scope_total = sum(in_imgt), n_husa_novel = sum(in_husa & !in_baseline),
+    n_husa_novel_in_imgt = sum(in_husa & !in_baseline & in_imgt), n_husa_novel_not_imgt = sum(in_husa & !in_baseline & !in_imgt)
+  ), by = gene_type]
+  overlap_counts <- merge(data.table(gene_type = segments), overlap_counts, by = "gene_type", all.x = TRUE)
+  for (col in setdiff(names(overlap_counts), "gene_type")) overlap_counts[is.na(get(col)), (col) := 0L]
+  overlap_counts <- overlap_counts[order(factor(gene_type, levels = segments))]
+  print(overlap_counts)
 
-fwrite(membership[, .(gene_type, seq_norm, in_baseline, in_husa, in_imgt, baseline_alleles, husa_alleles, imgt_alleles)], file.path(OUT$source, "supp1_sequence_membership.csv"))
-fwrite(overlap_counts, file.path(OUT$source, "supp1_overlap_counts.csv"))
-fwrite(flagged, file.path(OUT$source, "supp1_gene_attribution_notes.csv"))
+  # HUSA-only sequences that IMGT does know under a gene absent from HUSA.
+  husa_only <- merge(unique(husa[, .(allele, husa_gene, gene_type, seq_norm)]), membership[in_husa & !in_imgt, .(gene_type, seq_norm)], by = c("gene_type", "seq_norm"))
+  flagged <- merge(husa_only, imgt_full[, .(imgt_alleles = join_alleles(allele), imgt_genes = join_alleles(gene)), by = .(gene_type, seq_norm)], by = c("gene_type", "seq_norm"))
+  if (nrow(flagged)) flagged <- flagged[vapply(imgt_genes, function(gs) !any(trimws(unlist(strsplit(gs, ",", fixed = TRUE))) %in% husa_genes), logical(1))]
+  flagged <- flagged[, .(husa_allele = allele, husa_gene, gene_type, seq_norm, imgt_alleles, imgt_genes)][order(gene_type, husa_allele)]
 
+  fwrite(membership[, .(gene_type, seq_norm, in_baseline, in_husa, in_imgt, baseline_alleles, husa_alleles, imgt_alleles)], tables[1])
+  fwrite(overlap_counts, tables[2])
+  fwrite(flagged, tables[3])
+}
+
+membership <- fread(tables[1])
 venn_colors <- c(Baseline = "#D64A4A", HUSA = "#58A65C", IMGT = "#8c4ac2")
 panels <- lapply(segments, function(seg) {
   sub <- membership[gene_type == seg, .(Baseline = in_baseline, HUSA = in_husa, IMGT = in_imgt)]

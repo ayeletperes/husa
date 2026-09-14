@@ -5,11 +5,20 @@
 #
 # Seeds are the ones the published figure used: 123 before each optimize_order_enhanced()
 # call (it searches dendrogram flips stochastically) and 1234 before the Mantel block.
+# Tables are computed only when missing from results/figures/source_data; the figure is
+# always drawn from them.
 
 source("R/00_setup.R")
 source("R/lib/figure56_helpers.R")
 suppressPackageStartupMessages(library(ggplot2))
 
+tables <- file.path(OUT$source, paste0("figure4_", c("schematic.csv", "heatmap_matrix.csv.gz", "heatmap_rows.csv.gz", "heatmap_columns.csv",
+                                                     "dendrogram_merges.csv.gz", "dendrogram_leaves.csv.gz", "consensus.csv", "usage.csv.gz",
+                                                     "cophylogeny_pairs.csv.gz", "cophylogeny_mantel.csv", "cophylogeny_trend.csv")))
+names(tables) <- c("schematic", "matrix", "rows", "columns", "merges", "leaves", "consensus", "usage", "pairs", "mantel", "trend")
+locus_levels <- c("IGHV", "IGKV", "IGLV"); element_levels <- c("RSS", "Leader")  # used by both the compute and the draw path
+
+if (!all(file.exists(tables))) {
 rss_leader <- fread(need(file.path(OUT$rss_leader, "rss_leader_iuis_data.csv.gz")))
 husa_tsv <- need(file.path(OUT$husa, "husa.tsv"))
 repertoire_igh <- need(file.path(OUT$repertoire, "gg_repertoire_data_IGH_genotype_corrected.csv.gz"))
@@ -90,6 +99,11 @@ hc_leader <- as.hclust(result_leader$row_dend)
 leader_subgroup <- leader_v[, .(subgroup = paste0(unique(iuis_subgroup), collapse = ",")), by = leader][order(match(leader, hc_leader$labels))]
 consensus_leader <- generate_consensus(leader_seqs, vec_onehot)
 
+# An hclust is four coupled pieces (labels, merge, height, order); each drawn dendrogram travels as two tables.
+dend_tables <- function(hc, layer) list(
+  merges = data.table(layer = layer, step = seq_len(nrow(hc$merge)), left = hc$merge[, 1], right = hc$merge[, 2], height = hc$height),
+  leaves = data.table(layer = layer, leaf_index = seq_along(hc$labels), label = hc$labels, order_slot = match(seq_along(hc$labels), hc$order)))
+dd_rss <- dend_tables(hc_rss, "rss"); dd_leader <- dend_tables(hc_leader, "leader")
 dense_counts <- function(dt, row_col, rows, cols) {
   counts <- dt[, .N, by = c(row_col, "iuis_group")]
   setnames(counts, c(row_col, "iuis_group", "N"), c("row_seq", "column_label", "count"))
@@ -141,7 +155,6 @@ run_element <- function(seg, element, value_col, keep_pairs) {
        pairs = if (keep_pairs) data.table(gene_type = seg, element = element, coding_dist = cod[idx], element_dist = ne[idx]))
 }
 set.seed(1234)
-locus_levels <- c("IGHV", "IGKV", "IGLV"); element_levels <- c("RSS", "Leader")
 v_elements <- c(RSS = "rss_aligned", Leader = "leader")
 jd_segments <- intersect(c("IGHJ", "IGKJ", "IGLJ", "IGHD_5", "IGHD_3"), unique(cophy$gene_type))
 v_results <- list()
@@ -158,19 +171,30 @@ mantel_dt[ranges, `:=`(x = i.x, y = i.y), on = .(gene_type, element)]
 mantel_dt[!is.na(x), label := sprintf("Mantel r = %.2f, %s", mantel_r, fifelse(is.na(mantel_q), "q = NA", fifelse(mantel_q < 0.001, "q < 0.001", sprintf("q = %.3f", mantel_q))))]
 print(mantel_dt[, .(gene_type, element, n_alleles, mantel_r, mantel_p, mantel_q)])
 
-fwrite(schematic, file.path(OUT$source, "figure4_schematic.csv"))
-fwrite(matrix_dt, file.path(OUT$source, "figure4_heatmap_matrix.csv.gz"))
-fwrite(rows_dt, file.path(OUT$source, "figure4_heatmap_rows.csv.gz"))
-fwrite(data.table(position = seq_len(nrow(cols_dt)), column_label = cols_dt$label, column_subgroup = cols_dt$subgroup, split_group = cols_dt$split_group),
-       file.path(OUT$source, "figure4_heatmap_columns.csv"))
+fwrite(schematic, tables[["schematic"]])
+fwrite(matrix_dt, tables[["matrix"]]); fwrite(rows_dt, tables[["rows"]])
+fwrite(data.table(position = seq_len(nrow(cols_dt)), column_label = cols_dt$label, column_subgroup = cols_dt$subgroup, split_group = cols_dt$split_group), tables[["columns"]])
+fwrite(rbind(dd_rss$merges, dd_leader$merges), tables[["merges"]]); fwrite(rbind(dd_rss$leaves, dd_leader$leaves), tables[["leaves"]])
 fwrite(data.table(layer = c("rss", "leader"), consensus = c(consensus_rss$consensus, consensus_leader$consensus), boundary = c(nonamer_start, leader2_start), rss = c(TRUE, FALSE)),
-       file.path(OUT$source, "figure4_consensus.csv"))
-fwrite(usage_dt, file.path(OUT$source, "figure4_usage.csv.gz"))
-fwrite(pairs_dt, file.path(OUT$source, "figure4_cophylogeny_pairs.csv.gz"))
-fwrite(mantel_dt, file.path(OUT$source, "figure4_cophylogeny_mantel.csv"))
-fwrite(trend_dt, file.path(OUT$source, "figure4_cophylogeny_trend.csv"))
+       tables[["consensus"]])
+fwrite(usage_dt, tables[["usage"]]); fwrite(pairs_dt, tables[["pairs"]]); fwrite(mantel_dt, tables[["mantel"]]); fwrite(trend_dt, tables[["trend"]])
+}
 
 # ---- draw ----
+for (nm in names(tables)) assign(paste0(nm, "_tab"), fread(tables[[nm]]))
+blocks <- schematic_tab[layer == "block"]; regions <- schematic_tab[layer == "region"]; marks <- schematic_tab[layer %in% c("backbone", "end_label", "title")]
+cols_dt <- columns_tab[order(position)][, .(label = column_label, subgroup = column_subgroup, split_group)]
+rss_rows <- rows_tab[layer == "rss"][order(position)]; leader_rows <- rows_tab[layer == "leader"][order(position)]
+restore_hclust <- function(lyr, dist_method) {
+  merges <- merges_tab[layer == lyr][order(step)]; leaves <- leaves_tab[layer == lyr]
+  structure(list(merge = matrix(c(merges$left, merges$right), ncol = 2L), height = merges$height, order = leaves[order(order_slot), leaf_index],
+                 labels = leaves[order(leaf_index), label], method = "complete", dist.method = dist_method), class = "hclust")
+}
+hc_rss <- restore_hclust("rss", "hamming"); hc_leader <- restore_hclust("leader", "lv")
+rss_consensus <- consensus_tab[layer == "rss"]; leader_consensus <- consensus_tab[layer == "leader"]
+m_box <- as.matrix(dcast(usage_tab, subject_index ~ merged, value.var = "rel_usage")[, -"subject_index"])
+pairs_dt <- pairs_tab; mantel_dt <- mantel_tab; trend_dt <- trend_tab
+
 p_schematic <- ggplot() +
   geom_text(data = marks[layer == "title"], aes(x = xmid, y = y, label = label, size = size, fontface = fontface)) +
   geom_segment(data = marks[layer == "backbone"], aes(x = xmin, xend = xmax, y = y, yend = y), linewidth = 0.5) +
@@ -190,7 +214,7 @@ count_matrix <- function(dt, rows) {
   m <- as.matrix(wide[, -"row_seq"]); rownames(m) <- wide$row_seq
   m[rows, cols_dt$label, drop = FALSE]
 }
-subgroups <- unique(c(cols_dt$subgroup, rss_subgroup$subgroup, leader_subgroup$subgroup))
+subgroups <- unique(c(cols_dt$subgroup, rss_rows$annotation_subgroup, leader_rows$annotation_subgroup))
 graphics <- setNames(lapply(subgroups, subgroups_annotation_custom, colors_rss_subgroup = colors15), subgroups)
 column_ha <- HeatmapAnnotation(Subgroup = anno_customize(setNames(cols_dt$subgroup, cols_dt$label), graphics = graphics),
                                height = unit(20, "mm"), annotation_name_gp = gpar(fontsize = 22))
@@ -208,9 +232,9 @@ heatmap_of <- function(mat, hc, row_labels, consensus, boundary, rss, name, top,
           right_annotation = rowAnnotation(Subgroup = anno_customize(row_labels, graphics = graphics), width = unit(10, "mm"), show_annotation_name = FALSE),
           top_annotation = top, bottom_annotation = bottom, column_split = column_split)
 }
-ht_rss <- heatmap_of(count_matrix(matrix_dt[layer == "rss"], hc_rss$labels), hc_rss, rss_subgroup$subgroup, consensus_rss$consensus, nonamer_start, TRUE,
+ht_rss <- heatmap_of(count_matrix(matrix_tab[layer == "rss"], rss_rows$row_seq), hc_rss, rss_rows$annotation_subgroup, rss_consensus$consensus, rss_consensus$boundary, TRUE,
                      "labels_rss_IGHV", column_ha, NULL, "top")
-ht_leader <- heatmap_of(count_matrix(matrix_dt[layer == "leader"], hc_leader$labels), hc_leader, leader_subgroup$subgroup, consensus_leader$consensus, leader2_start, FALSE,
+ht_leader <- heatmap_of(count_matrix(matrix_tab[layer == "leader"], leader_rows$row_seq), hc_leader, leader_rows$annotation_subgroup, leader_consensus$consensus, leader_consensus$boundary, FALSE,
                         "labels_leader_IGHV", ha_usage, column_ha, "bottom")
 # Row-side titles take the column-title style rotated; Heatmap() exposes no argument for it.
 title_param <- ht_rss@column_title_param
@@ -218,8 +242,8 @@ ht_rss@column_title <- ""
 title_param$rot <- 270; title_param$just <- c(0.5, 0.3)
 ht_rss@row_title <- "RSS"; ht_rss@row_title_param <- title_param
 ht_leader@row_title <- "Leader"; ht_leader@row_title_param <- title_param
-consensus_rss_label <- create_consensus_label(consensus_rss$consensus, nucleotide_colors, nonamer_start, fontsize_px = 32)
-consensus_leader_label <- create_consensus_label(consensus_leader$consensus, nucleotide_colors, leader2_start, rss = FALSE, fontsize_px = 32)
+consensus_rss_label <- create_consensus_label(rss_consensus$consensus, nucleotide_colors, rss_consensus$boundary, fontsize_px = 32)
+consensus_leader_label <- create_consensus_label(leader_consensus$consensus, nucleotide_colors, leader_consensus$boundary, rss = FALSE, fontsize_px = 32)
 lgd <- Legend(col_fun = col_fun, title = "Count", direction = "horizontal", labels_gp = gpar(fontsize = 28), title_gp = gpar(fontsize = 32, fontface = "bold"),
               legend_width = unit(12, "cm"), grid_height = unit(1, "cm"), grid_width = unit(1, "cm"))
 

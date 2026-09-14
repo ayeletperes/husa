@@ -1,12 +1,16 @@
 #!/usr/bin/env Rscript
 # Light-chain pairing: P(J|V) and P(V|J) for IGK (A, B) and IGL (C, D), each over the
 # Spearman heatmap of its rank orders. V is seriated then put back in genomic order; J is
-# seriated only.
+# seriated only. Tables are computed only when missing from results/figures/source_data;
+# the figure is always drawn from them.
 
 source("R/00_setup.R")
 source("R/lib/dj_pairing.R")
-suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot); library(seriation) })
+suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot) })
 
+tables <- file.path(OUT$source, c("light_pairing_probabilities.csv.gz", "light_pairing_correlations.csv.gz", "light_pairing_axis_levels.csv"))
+if (!all(file.exists(tables))) {
+library(seriation)
 locus_gene_order <- function(locus, segment) {
   b <- fread(need(IN$gene_bed), col.names = c("chrom", "start", "end", "gene"))
   unique(b[grepl(sprintf("^%s%s", locus, segment), gene), gsub("^IG[HKL]", "", gene)])
@@ -34,12 +38,13 @@ for (locus in c("IGK", "IGL")) {
                             data.table(locus = locus, axis = paste0(locus, "J"), short_label = j_short, plot_order = seq_along(j_short)))
   cat(sprintf("%s  %d subjects  %d V ASCs  %d J ASCs\n", locus, uniqueN(rep_dt$vdjbase_subject), length(v_short), length(j_short)))
 }
-prob <- rbindlist(prob_all, use.names = TRUE); corr <- rbindlist(corr_all, use.names = TRUE); lev <- rbindlist(lev_all, use.names = TRUE)
-fwrite(prob, file.path(OUT$source, "light_pairing_probabilities.csv.gz"))
-fwrite(corr, file.path(OUT$source, "light_pairing_correlations.csv.gz"))
-fwrite(lev, file.path(OUT$source, "light_pairing_axis_levels.csv"))
+fwrite(rbindlist(prob_all, use.names = TRUE), tables[1])
+fwrite(rbindlist(corr_all, use.names = TRUE), tables[2])
+fwrite(rbindlist(lev_all, use.names = TRUE), tables[3])
+}
 
 # ---- draw ----
+prob <- fread(tables[1]); corr <- fread(tables[2]); lev <- fread(tables[3])
 panels <- list()
 for (lc in c("IGK", "IGL")) {
   v_short <- lev[locus == lc & axis == paste0(lc, "V")][order(plot_order), short_label]

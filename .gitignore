@@ -1,6 +1,13 @@
 data/*
 !data/README.md
-results/
+# ship the figure source tables and rendered figures so the figures reproduce without the
+# primary inputs; ignore every other (heavy, regenerated) result
+results/*
+!results/figures
+results/figures/*
+!results/figures/source_data
+!results/figures/*.pdf
+!results/figures/*.png
 logs/
 .Rhistory
 .RData

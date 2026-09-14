@@ -2,12 +2,16 @@
 # Supplementary figure 7: IGHV/IGHD conditional usage, the V-D counterpart of the D-J pairing
 # figure. A: P(D|V) per subject by IGHD ASC, coloured by IGHV ASC, over the IGHD rank-order
 # Spearman heatmap. B: P(V|D), the mirror. The IGHD axis carries the same grouping and genomic
-# order as the D-J figure; IGHV is seriated.
+# order as the D-J figure; IGHV is seriated. Tables are computed only when missing from
+# results/figures/source_data; the figure is always drawn from them.
 
 source("R/00_setup.R")
 source("R/lib/dj_pairing.R")
-suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot); library(seriation) })
+suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(cowplot) })
 
+tables <- file.path(OUT$source, c("supp7_probabilities.csv.gz", "supp7_correlations.csv.gz", "supp7_axis_levels.csv"))
+if (!all(file.exists(tables))) {
+library(seriation)
 rep_dt <- fread(need(file.path(OUT$repertoire, "gg_repertoire_data_IGH_genotype_corrected.csv.gz")))
 res <- compute_bias_matrices(rep_dt, subject_col = "vdjbase_subject", gene_a_col = "d_gene_iuis", gene_b_col = "v_gene_iuis", top_n_subjects = uniqueN(rep_dt$vdjbase_subject))
 d_seriated <- rownames(res$spearman_a_given_b)[get_order(seriate(dist(res$spearman_a_given_b)))]
@@ -21,14 +25,17 @@ prob <- merge(prob, ord_dv[, .(gene_a_short, gene_b_short, order_d_given_v = cus
 prob <- merge(prob, ord_vd[, .(gene_b_short, gene_a_short, order_v_given_d = custom_order)], by = c("gene_b_short", "gene_a_short"))
 corr_dv <- collapse_correlation_for_plot(build_correlation_long_dt(res$spearman_a_given_b), d_short, d_short)[, direction := "P(D|V)"]
 corr_vd <- collapse_correlation_for_plot(build_correlation_long_dt(res$spearman_b_given_a), v_short, v_short)[, direction := "P(V|D)"]
-fwrite(prob, file.path(OUT$source, "supp7_probabilities.csv.gz"))
-fwrite(rbind(corr_dv, corr_vd), file.path(OUT$source, "supp7_correlations.csv.gz"))
+fwrite(prob, tables[1])
+fwrite(rbind(corr_dv, corr_vd), tables[2])
 fwrite(rbind(data.table(axis = "IGHD", short_label = d_short, plot_order = seq_along(d_short)),
-             data.table(axis = "IGHV", short_label = v_short, plot_order = seq_along(v_short))), file.path(OUT$source, "supp7_axis_levels.csv"))
+             data.table(axis = "IGHV", short_label = v_short, plot_order = seq_along(v_short))), tables[3])
 cat(sprintf("supp7: %d subjects, %d IGHD ASCs, %d IGHV ASCs\n", uniqueN(prob$subject), length(d_short), length(v_short)))
+}
 
 # ---- draw ----
-d_short <- gsub("^IGH", "", d_short); v_short <- gsub("^IGH", "", v_short)
+lev <- fread(tables[3]); prob <- fread(tables[1]); corr <- fread(tables[2])
+d_short <- gsub("^IGH", "", lev[axis == "IGHD"][order(plot_order), short_label]); v_short <- gsub("^IGH", "", lev[axis == "IGHV"][order(plot_order), short_label])
+corr_dv <- corr[direction == "P(D|V)"]; corr_vd <- corr[direction == "P(V|D)"]
 prob[, gene_a_short := factor(gsub("^IGH", "", as.character(gene_a_short)), levels = d_short)]
 prob[, gene_b_short := factor(gsub("^IGH", "", as.character(gene_b_short)), levels = v_short)]
 d_cols <- make_named_palette(d_short); v_cols <- make_named_palette(v_short)

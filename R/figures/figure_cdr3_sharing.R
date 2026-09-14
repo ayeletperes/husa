@@ -2,20 +2,21 @@
 # IGK public-CDR3 sharing and its genetic control. A-C reuse the supp6 tables (run supp6.R
 # first). D-F show the IGKV1D-13 coding-allele example from the QTL stage: the usage
 # Manhattan, gene usage by lead-SNP genotype, and lead-CDR3 usage against gene usage (zeros
-# re-added so the through-origin fit anchors over the full range).
+# re-added so the through-origin fit anchors over the full range). Tables are computed only
+# when missing from results/figures/source_data; the figure is always drawn from them.
 
 source("R/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork) })
 set.seed(42)
 
+tables <- file.path(OUT$source, paste0("figure_cdr3_sharing_", c("manhattan", "usage_by_genotype", "cdr3_vs_usage", "within_gene"), ".csv"))
+names(tables) <- c("manhattan", "usage", "cdr3", "within")
+
+if (!all(file.exists(tables))) {
 v1d13 <- file.path(OUT$qtl, "igkv1d13")
 manhattan <- fread(need(file.path(v1d13, "panelA_manhattan.tsv")))
 usage <- fread(need(file.path(v1d13, "panelB_usage_by_genotype.tsv")))
 cdr3 <- fread(need(file.path(v1d13, "panelC_cdr3_vs_usage.tsv")))
-ccdf <- fread(need(file.path(OUT$source, "supp6_igk_public_cdr3_ccdf.csv")))[locus == "IGK"]
-rgs <- fread(need(file.path(OUT$source, "supp6_igk_rgs_vs_cdr3_overlap.csv.gz")))[locus == "IGK"]
-alle <- fread(need(file.path(OUT$source, "supp6_igk_cdr3_allele_sharing.csv")))[locus == "IGK"]
-
 # Panel C of the QTL stage kept only lead-CDR3 users; every other depth-passing subject lands at zero.
 cdr3_full <- merge(usage[low_depth == FALSE, .(subject, usage, dosage, genotype)], cdr3[, .(subject, cdr3_usage)], by = "subject", all.x = TRUE)
 cdr3_full[is.na(cdr3_usage), cdr3_usage := 0]
@@ -24,12 +25,14 @@ within_gene <- merge(usage[low_depth == FALSE, .(subject, n_v, dosage, genotype)
 within_gene[is.na(n_cdr3), n_cdr3 := 0L]
 within_gene <- within_gene[n_v > 0][, within_freq := n_cdr3 / n_v]
 print(within_gene[, .(n = .N, median_within_freq = round(median(within_freq), 4)), by = genotype][order(genotype)])
-fwrite(manhattan, file.path(OUT$source, "figure_cdr3_sharing_manhattan.csv"))
-fwrite(usage, file.path(OUT$source, "figure_cdr3_sharing_usage_by_genotype.csv"))
-fwrite(cdr3_full, file.path(OUT$source, "figure_cdr3_sharing_cdr3_vs_usage.csv"))
-fwrite(within_gene, file.path(OUT$source, "figure_cdr3_sharing_within_gene.csv"))
+fwrite(manhattan, tables[["manhattan"]]); fwrite(usage, tables[["usage"]]); fwrite(cdr3_full, tables[["cdr3"]]); fwrite(within_gene, tables[["within"]])
+}
 
-# ---- draw ----
+# ---- draw (A-C from the supp6 tables, D-F from this figure's) ----
+manhattan <- fread(tables[["manhattan"]]); usage <- fread(tables[["usage"]]); cdr3_full <- fread(tables[["cdr3"]])
+ccdf <- fread(need(file.path(OUT$source, "supp6_igk_public_cdr3_ccdf.csv")))[locus == "IGK"]
+rgs <- fread(need(file.path(OUT$source, "supp6_igk_rgs_vs_cdr3_overlap.csv.gz")))[locus == "IGK"]
+alle <- fread(need(file.path(OUT$source, "supp6_igk_cdr3_allele_sharing.csv")))[locus == "IGK"]
 geno_cols <- c(`0/0` = "#2a78d6", `0/1` = "#e34948", `1/1` = "#eda100")
 diploid <- function(g) factor(as.character(g), levels = c("0", "1", "2"), labels = c("0/0", "0/1", "1/1"))
 base_size <- 18

@@ -1,0 +1,12 @@
+gene_type,element,n_alleles,coding_dist,element_dist,mantel_r,mantel_p,mantel_q,x,y,label
+IGHV,RSS,325,lv,hamming,0.667651222089056,0,0,2.74,24.25,"Mantel r = 0.67, q < 0.001"
+IGHV,Leader,329,lv,lv,0.689887766643194,0,0,2.74,33.95,"Mantel r = 0.69, q < 0.001"
+IGKV,RSS,182,lv,hamming,0.354192945318893,0,0,2.52,11.64,"Mantel r = 0.35, q < 0.001"
+IGKV,Leader,191,lv,lv,0.469051977138121,0,0,2.52,40.74,"Mantel r = 0.47, q < 0.001"
+IGLV,RSS,185,lv,hamming,0.472406144382129,0,0,2.94,22.31,"Mantel r = 0.47, q < 0.001"
+IGLV,Leader,202,lv,lv,0.620710541170191,0,0,2.94,32.01,"Mantel r = 0.62, q < 0.001"
+IGHJ,RSS,14,lv,hamming,0.125029156967024,0.134,0.134,,,
+IGKJ,RSS,11,lv,hamming,0.723498173131308,0.00025,0.000305555555555556,,,
+IGLJ,RSS,24,lv,hamming,0.801302840874432,0,0,,,
+IGHD_5,RSS,62,lv,hamming,0.099102710748115,0.028,0.0308,,,
+IGHD_3,RSS,61,lv,hamming,0.359267727897813,0,0,,,

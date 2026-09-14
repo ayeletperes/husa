@@ -58,7 +58,13 @@ run from there (the runner does).
 | figures | `R/figures/<figure>.R` | the above plus the IMGT and metadata references | `results/figures/<figure>.pdf`, `results/figures/source_data/` |
 
 Each figure script computes the tables it draws from, writes them to
-`results/figures/source_data/`, and then draws. `supp4_5.R` draws both supplementary
+`results/figures/source_data/`, and then draws from those tables. When a figure's tables
+already exist the computation is skipped, so the figures regenerate from the shipped
+`results/figures/source_data/` alone, without the Zenodo inputs:
+
+```bash
+bash run_pipeline.sh --force figures     # redraw every figure from source_data
+``` `supp4_5.R` draws both supplementary
 figures 4 and 5 from one computation; `figure_cdr3_sharing.R` reads tables written by
 `supp6.R`, so the runner orders them.
 

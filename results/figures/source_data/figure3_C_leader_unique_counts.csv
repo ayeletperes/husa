@@ -1,0 +1,7 @@
+gene_type,variable,value,consensus_label
+IGHV,Alleles,149,Either
+IGHV,Alleles,71,None
+IGHV,Alleles,42,Both
+IGHV,Leaders,39,Either
+IGHV,Leaders,27,None
+IGHV,Leaders,8,Both

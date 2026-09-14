@@ -3,6 +3,8 @@
 # A: per-gene-type Venn of allele membership (baseline, DS1 = 1KGP, DS2 = HPRC, DS3 = in-house).
 # B: alleles ranked by carrier count, labels on the top ranks, novel/known pie inset.
 # C: per-locus upset over ancestry, with the pairwise sample-to-sample allele overlap.
+# Tables are computed only when missing from results/figures/source_data; the figure is
+# always drawn from them.
 
 source("R/00_setup.R")
 source("R/lib/upset_v3.R")
@@ -10,29 +12,35 @@ suppressPackageStartupMessages({ library(ggplot2); library(ggpubr); library(patc
   library(ggVennDiagram); library(ggvenn); library(ggrepel) })
 set.seed(42)  # ggrepel places labels by random search
 
-split_csv <- function(x) { v <- trimws(unlist(strsplit(x[!is.na(x) & nzchar(x)], ",", fixed = TRUE))); v[nzchar(v)] }
-count_csv <- function(x) uniqueN(split_csv(x))
+tables <- file.path(OUT$source, paste0("figure2_", c("A", "B", "B_pie", "dagger_alleles", "C_genomic_alleles", "C_upset", "C_genomic_overlap", "axis_levels"), ".csv"))
+names(tables) <- c("A", "B", "B_pie", "dagger", "genomic", "upset", "overlap", "levels")
 
-husa <- fread(need(file.path(OUT$husa, "husa.tsv")))
-# The plotted name prefers the HUSA name, then the VDJbase name, then the ASC allele.
-husa[, display_allele := fifelse(!is.na(husa) & nzchar(husa), husa, fifelse(!is.na(vdjbase_allele) & nzchar(vdjbase_allele), vdjbase_allele, allele))]
-allele_counts <- husa[, .(sample_count_genomic_watson = count_csv(samples_genomic_watson),
-                          sample_count_genomic_hprc = count_csv(samples_genomic_hprc),
-                          sample_count_genomic_1kpg = count_csv(samples_genomic_1kpg),
-                          in_baseline_reference = any(in_baseline_reference)), by = .(gene_type, allele, display_allele)]
-allele_counts[, sample_count_genomic := sample_count_genomic_watson + sample_count_genomic_hprc + sample_count_genomic_1kpg]
+if (!all(file.exists(tables))) {
+  split_csv <- function(x) { v <- trimws(unlist(strsplit(x[!is.na(x) & nzchar(x)], ",", fixed = TRUE))); v[nzchar(v)] }
+  count_csv <- function(x) uniqueN(split_csv(x))
 
-# ---- A: source membership ----
-panel_a <- allele_counts[, .(allele, gene_type, Baseline = in_baseline_reference, DS3 = sample_count_genomic_watson > 0L,
-                             DS1 = sample_count_genomic_1kpg > 0L, DS2 = sample_count_genomic_hprc > 0L)]
+  husa <- fread(need(file.path(OUT$husa, "husa.tsv")))
+  # The plotted name prefers the HUSA name, then the VDJbase name, then the ASC allele.
+  husa[, display_allele := fifelse(!is.na(husa) & nzchar(husa), husa, fifelse(!is.na(vdjbase_allele) & nzchar(vdjbase_allele), vdjbase_allele, allele))]
+  allele_counts <- husa[, .(sample_count_genomic_watson = count_csv(samples_genomic_watson),
+                            sample_count_genomic_hprc = count_csv(samples_genomic_hprc),
+                            sample_count_genomic_1kpg = count_csv(samples_genomic_1kpg),
+                            in_baseline_reference = any(in_baseline_reference)), by = .(gene_type, allele, display_allele)]
+  allele_counts[, sample_count_genomic := sample_count_genomic_watson + sample_count_genomic_hprc + sample_count_genomic_1kpg]
 
-# ---- B: carrier-count ranks. The three most carried alleles are labelled, plus the most
-# carried one absent from the baseline; a label naming several alleles collapses to the first
-# plus a dagger, listed separately for the caption. ----
-rank_labels <- function(summary) {
+  # ---- A: source membership ----
+  panel_a <- allele_counts[, .(allele, gene_type, Baseline = in_baseline_reference, DS3 = sample_count_genomic_watson > 0L,
+                               DS1 = sample_count_genomic_1kpg > 0L, DS2 = sample_count_genomic_hprc > 0L)]
+
+  # ---- B: carrier-count ranks. The three most carried alleles are labelled, plus the most
+  # carried one absent from the baseline; a label naming several alleles collapses to the first
+  # plus a dagger, listed separately for the caption. ----
+  genomic_summary <- allele_counts[sample_count_genomic > 0L]
+  genomic_summary[, sample_count := sample_count_genomic]
+  genomic_summary[order(sample_count, decreasing = TRUE), order := seq_len(.N), by = gene_type]
   rank_parts <- list(); dagger_parts <- list()
-  for (g in unique(summary$gene_type)) {
-    sub <- summary[gene_type == g][order(order)]
+  for (g in unique(genomic_summary$gene_type)) {
+    sub <- genomic_summary[gene_type == g][order(order)]
     ids <- 1:min(3L, nrow(sub))
     if (sub[in_baseline_reference == FALSE, .N] > 0L) ids <- unique(c(ids, sub[in_baseline_reference == FALSE, min(order)]))
     sub[order %in% ids, label := gsub("IG[HKL]", "", display_allele)]
@@ -46,68 +54,66 @@ rank_labels <- function(summary) {
     sub[, ranked := !is.na(label)]
     rank_parts[[g]] <- sub
   }
-  list(ranks = rbindlist(rank_parts), daggers = if (length(dagger_parts)) rbindlist(dagger_parts) else data.table())
+  rank_data <- rbindlist(rank_parts)
+  dagger_alleles <- if (length(dagger_parts)) rbindlist(dagger_parts) else data.table()
+  rank_pie <- rank_data[, .(count = .N), by = .(gene_type, in_baseline_reference)]
+
+  # ---- C: which ancestries carry which allele, and how much two individuals share ----
+  ancestry_of <- list(
+    DS3 = fread(need(IN$watson_metadata))[, setNames(ancestry_population, vdjbase_name)],
+    DS2 = fread(need(IN$hprc_metadata))[, setNames(Ancestry, sample)],
+    DS1 = fread(need(IN$kgp_metadata))[, setNames(Ancestry, sample)])
+  cohort <- function(count_col, samples_col, dataset) {
+    husa[get(count_col) > 0, .(sample = split_csv(get(samples_col)), source = "GGS", genomic_dataset = dataset,
+                               in_baseline_reference = any(in_baseline_reference)), by = .(allele, gene_type)
+    ][, ancestry_population := ancestry_of[[dataset]][sample]]
+  }
+  genomic <- rbindlist(list(cohort("sample_count_genomic_watson", "samples_genomic_watson", "DS3"),
+                            cohort("sample_count_genomic_hprc", "samples_genomic_hprc", "DS2"),
+                            cohort("sample_count_genomic_1kpg", "samples_genomic_1kpg", "DS1")), fill = TRUE, use.names = TRUE)
+  genomic[, chain := substr(gene_type, 1, 3)]
+  ancestry_levels <- sort(unique(genomic$ancestry_population))
+
+  upset_membership <- rbindlist(lapply(unique(genomic$chain), function(ch) {
+    d <- genomic[chain == ch]
+    d <- d[!duplicated(paste(allele, sample, source, ancestry_population, in_baseline_reference))]
+    d <- d[, .(present = uniqueN(sample) > 0, novel = any(!in_baseline_reference)), by = .(allele, gene_type, ancestry_population)]
+    w <- dcast(d, gene_type + allele + novel ~ ancestry_population, value.var = "present", fill = FALSE)
+    w[, chain := ch]
+    w[, c("chain", "gene_type", "allele", "novel", ancestry_levels), with = FALSE]
+  }), use.names = TRUE, fill = TRUE)
+  for (col in ancestry_levels) upset_membership[is.na(get(col)), (col) := FALSE]
+
+  # Overlap coefficient and Jaccard distance for every pair of individuals within a locus and
+  # ancestry, counted as a matrix product.
+  overlap_key <- unique(genomic[!is.na(ancestry_population) & !is.na(allele), .(chain, ancestry_population, sample, allele)])
+  genomic_overlap <- rbindlist(lapply(split(overlap_key, by = c("chain", "ancestry_population")), function(grp) {
+    samples <- unique(grp$sample); alleles <- unique(grp$allele)
+    if (length(samples) < 2L) return(NULL)
+    carried <- matrix(0, nrow = length(samples), ncol = length(alleles))
+    carried[cbind(match(grp$sample, samples), match(grp$allele, alleles))] <- 1
+    shared <- tcrossprod(carried); sizes <- diag(shared)
+    ij <- which(upper.tri(shared), arr.ind = TRUE); i <- ij[, 1L]; j <- ij[, 2L]; n_shared <- shared[ij]
+    data.table(locus = grp$chain[[1L]], ancestry_population = grp$ancestry_population[[1L]], Sample1 = samples[i], Sample2 = samples[j],
+               jaccard_distance = 1 - n_shared / (sizes[i] + sizes[j] - n_shared), overlap_coefficient = n_shared / pmin(sizes[i], sizes[j]))
+  }))
+  # fwrite drops factor levels, so the plotted orders travel as a table (the upset lays its sets out bottom-up).
+  axis_levels <- rbindlist(list(
+    data.table(axis = "upset_sets", label = rev(ancestry_levels), plot_order = seq_along(ancestry_levels)),
+    data.table(axis = "overlap_x", label = ancestry_levels, plot_order = seq_along(ancestry_levels)),
+    data.table(axis = "venn_sets", label = c("Baseline", "DS3", "DS1", "DS2"), plot_order = 1:4)))
+
+  fwrite(panel_a, tables[["A"]]); fwrite(rank_data, tables[["B"]]); fwrite(rank_pie, tables[["B_pie"]]); fwrite(dagger_alleles, tables[["dagger"]])
+  fwrite(genomic, tables[["genomic"]]); fwrite(upset_membership, tables[["upset"]]); fwrite(genomic_overlap, tables[["overlap"]]); fwrite(axis_levels, tables[["levels"]])
+  cat(sprintf("figure2: %d alleles, %d with genomic carriers, %d ancestries, %d sample pairs\n",
+              nrow(panel_a), nrow(rank_data), length(ancestry_levels), nrow(genomic_overlap)))
 }
-genomic_summary <- allele_counts[sample_count_genomic > 0L]
-genomic_summary[, sample_count := sample_count_genomic]
-genomic_summary[order(sample_count, decreasing = TRUE), order := seq_len(.N), by = gene_type]
-ranked <- rank_labels(genomic_summary)
-rank_data <- ranked$ranks
-rank_pie <- rank_data[, .(count = .N), by = .(gene_type, in_baseline_reference)]
-
-# ---- C: which ancestries carry which allele, and how much two individuals share ----
-ancestry_of <- list(
-  DS3 = fread(need(IN$watson_metadata))[, setNames(ancestry_population, vdjbase_name)],
-  DS2 = fread(need(IN$hprc_metadata))[, setNames(Ancestry, sample)],
-  DS1 = fread(need(IN$kgp_metadata))[, setNames(Ancestry, sample)])
-cohort <- function(count_col, samples_col, dataset) {
-  husa[get(count_col) > 0, .(sample = split_csv(get(samples_col)), source = "GGS", genomic_dataset = dataset,
-                             in_baseline_reference = any(in_baseline_reference)), by = .(allele, gene_type)
-  ][, ancestry_population := ancestry_of[[dataset]][sample]]
-}
-genomic <- rbindlist(list(cohort("sample_count_genomic_watson", "samples_genomic_watson", "DS3"),
-                          cohort("sample_count_genomic_hprc", "samples_genomic_hprc", "DS2"),
-                          cohort("sample_count_genomic_1kpg", "samples_genomic_1kpg", "DS1")), fill = TRUE, use.names = TRUE)
-genomic[, chain := substr(gene_type, 1, 3)]
-ancestry_levels <- sort(unique(genomic$ancestry_population))
-
-upset_membership <- rbindlist(lapply(unique(genomic$chain), function(ch) {
-  d <- genomic[chain == ch]
-  d <- d[!duplicated(paste(allele, sample, source, ancestry_population, in_baseline_reference))]
-  d <- d[, .(present = uniqueN(sample) > 0, novel = any(!in_baseline_reference)), by = .(allele, gene_type, ancestry_population)]
-  w <- dcast(d, gene_type + allele + novel ~ ancestry_population, value.var = "present", fill = FALSE)
-  w[, chain := ch]
-  w[, c("chain", "gene_type", "allele", "novel", ancestry_levels), with = FALSE]
-}), use.names = TRUE, fill = TRUE)
-for (col in ancestry_levels) upset_membership[is.na(get(col)), (col) := FALSE]
-
-# Overlap coefficient and Jaccard distance for every pair of individuals within a locus and
-# ancestry, counted as a matrix product.
-overlap_key <- unique(genomic[!is.na(ancestry_population) & !is.na(allele), .(chain, ancestry_population, sample, allele)])
-genomic_overlap <- rbindlist(lapply(split(overlap_key, by = c("chain", "ancestry_population")), function(grp) {
-  samples <- unique(grp$sample); alleles <- unique(grp$allele)
-  if (length(samples) < 2L) return(NULL)
-  carried <- matrix(0, nrow = length(samples), ncol = length(alleles))
-  carried[cbind(match(grp$sample, samples), match(grp$allele, alleles))] <- 1
-  shared <- tcrossprod(carried); sizes <- diag(shared)
-  ij <- which(upper.tri(shared), arr.ind = TRUE); i <- ij[, 1L]; j <- ij[, 2L]; n_shared <- shared[ij]
-  data.table(locus = grp$chain[[1L]], ancestry_population = grp$ancestry_population[[1L]], Sample1 = samples[i], Sample2 = samples[j],
-             jaccard_distance = 1 - n_shared / (sizes[i] + sizes[j] - n_shared), overlap_coefficient = n_shared / pmin(sizes[i], sizes[j]))
-}))
-
-fwrite(panel_a, file.path(OUT$source, "figure2_A.csv"))
-fwrite(rank_data, file.path(OUT$source, "figure2_B.csv"))
-fwrite(ranked$daggers, file.path(OUT$source, "figure2_dagger_alleles.csv"))
-fwrite(rank_pie, file.path(OUT$source, "figure2_B_pie.csv"))
-fwrite(genomic, file.path(OUT$source, "figure2_C_genomic_alleles.csv"))
-fwrite(upset_membership, file.path(OUT$source, "figure2_C_upset.csv"))
-fwrite(genomic_overlap, file.path(OUT$source, "figure2_C_genomic_overlap.csv"))
-cat(sprintf("figure2: %d alleles, %d with genomic carriers, %d ancestries, %d sample pairs\n",
-            nrow(panel_a), nrow(rank_data), length(ancestry_levels), nrow(genomic_overlap)))
 
 # ---- draw ----
-venn_sets <- c("Baseline", "DS3", "DS1", "DS2")
-upset_sets <- rev(ancestry_levels)  # the upset lays its sets out bottom-up
+panel_a <- fread(tables[["A"]]); rank_data <- fread(tables[["B"]]); rank_pie <- fread(tables[["B_pie"]])
+upset_membership <- fread(tables[["upset"]]); genomic_overlap <- fread(tables[["overlap"]]); axis_levels <- fread(tables[["levels"]])
+level_order <- function(axis_name) axis_levels[axis == axis_name][order(plot_order), label]
+venn_sets <- level_order("venn_sets"); upset_sets <- level_order("upset_sets"); overlap_x <- level_order("overlap_x")
 venn_colors <- setNames(c("#D64A4A", "#eba525", "#8c4ac2", "#58A65C"), venn_sets)
 
 venn_plots <- setNames(lapply(unique(panel_a$gene_type), function(g) {
@@ -168,7 +174,7 @@ row2 <- plot_grid(
             add_pie(rank_plots[["IGLJ"]] + x_axis_only, pie_plots[["IGLJ"]], scale = 1, x = 0.7), ncol = 1),
   nrow = 1, rel_widths = c(3 / 8, 2 / 8, 2 / 8))
 
-genomic_overlap[, ancestry_population := factor(ancestry_population, levels = ancestry_levels)]
+genomic_overlap[, ancestry_population := factor(ancestry_population, levels = overlap_x)]
 overlap_plots <- setNames(lapply(unique(genomic_overlap$locus), function(ch) {
   ggplot(genomic_overlap[locus == ch], aes(x = ancestry_population, y = overlap_coefficient)) +
     geom_boxplot(position = "dodge") +

@@ -3,11 +3,16 @@
 # individuals share a CDR3). B: RGS-allele overlap versus CDR3 overlap per pair of
 # individuals, on depth-matched subsamples. C: CDR3 sharing against the V allele it is used
 # with. Panel B is a full pairwise sweep and takes tens of minutes; its tables are reused by
-# the CDR3-sharing main figure.
+# the CDR3-sharing main figure. Tables are computed only when missing from
+# results/figures/source_data; the figure is always drawn from them.
 
 source("R/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(ggpubr) })
 
+tables <- file.path(OUT$source, paste0("supp6_", c("axis_levels.csv", "igk_public_cdr3_ccdf.csv", "igk_rgs_vs_cdr3_overlap.csv.gz", "igk_overlap_bin_quartiles.csv", "igk_cdr3_allele_sharing.csv")))
+names(tables) <- c("levels", "ccdf", "overlap", "quartiles", "sharing")
+
+if (!all(file.exists(tables))) {
 igk_sample_min <- 5000L  # individuals need this many IGK sequences; pairwise overlap is measured on subsamples of this size
 n_bins <- 4L
 n_draws <- 10L
@@ -75,14 +80,15 @@ allele_cdr3[grepl("IGKV1D-39|IGKV1-39", v_call_iuis), label := "IGKV1-39/IGKV1D-
 allele_cdr3[, label := paste0(label, " (n=", number_of_subjects, ")")]
 setorder(allele_cdr3, label, -share_number, cdr3_aa)
 
-fwrite(data.table(axis = "overlap_bin", level = bin_levels, plot_order = seq_along(bin_levels)), file.path(OUT$source, "supp6_axis_levels.csv"))
-fwrite(ccdf, file.path(OUT$source, "supp6_igk_public_cdr3_ccdf.csv"))
-fwrite(rgs_vs_cdr3, file.path(OUT$source, "supp6_igk_rgs_vs_cdr3_overlap.csv.gz"))
-fwrite(box_quartiles, file.path(OUT$source, "supp6_igk_overlap_bin_quartiles.csv"))
-fwrite(allele_cdr3, file.path(OUT$source, "supp6_igk_cdr3_allele_sharing.csv"))
+fwrite(data.table(axis = "overlap_bin", level = bin_levels, plot_order = seq_along(bin_levels)), tables[["levels"]])
+fwrite(ccdf, tables[["ccdf"]]); fwrite(rgs_vs_cdr3, tables[["overlap"]]); fwrite(box_quartiles, tables[["quartiles"]]); fwrite(allele_cdr3, tables[["sharing"]])
 cat(sprintf("supp6: %d IGK individuals, %d pairs, %d V-allele-specific CDR3s\n", length(igk_samples), nrow(rgs_vs_cdr3), nrow(allele_cdr3)))
+}
 
 # ---- draw ----
+ccdf <- fread(tables[["ccdf"]]); rgs_vs_cdr3 <- fread(tables[["overlap"]]); box_quartiles <- fread(tables[["quartiles"]]); allele_cdr3 <- fread(tables[["sharing"]])
+bin_levels <- fread(tables[["levels"]])[axis == "overlap_bin"][order(plot_order), level]
+rgs_vs_cdr3[, overlap_bin_quant := factor(overlap_bin_quant, levels = bin_levels)]
 base_size <- 24
 p_public <- ggplot(ccdf, aes(x = n_samples, y = log10(prop_ge_x))) + geom_step(direction = "hv") +
   labs(x = "Number of Individuals", y = expression(log[10] ~ "CCDF (shared CDR3s)")) + facet_wrap(~locus, scales = "free") + theme_pubclean(base_size = base_size)

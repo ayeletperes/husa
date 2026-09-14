@@ -1,0 +1,17 @@
+axis,label,plot_order
+upset_sets,SAS,1
+upset_sets,MIXED,2
+upset_sets,EUR,3
+upset_sets,EAS,4
+upset_sets,AMR,5
+upset_sets,AFR,6
+overlap_x,AFR,1
+overlap_x,AMR,2
+overlap_x,EAS,3
+overlap_x,EUR,4
+overlap_x,MIXED,5
+overlap_x,SAS,6
+venn_sets,Baseline,1
+venn_sets,DS3,2
+venn_sets,DS1,3
+venn_sets,DS2,4

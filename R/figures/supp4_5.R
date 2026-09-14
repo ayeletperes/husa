@@ -3,10 +3,16 @@
 # IUIS group, rows and columns ordered by the blockiness optimiser (seed 123 before each call).
 #   supp4  IGKV and IGLV: an RSS heatmap stacked over a leader heatmap.
 #   supp5  IGHD 5'/3' and IGHJ / IGKJ / IGLJ: RSS heatmaps only.
+# Tables are computed only when missing from results/figures/source_data; the figures are
+# always drawn from them.
 
 source("R/00_setup.R")
 source("R/lib/figure56_helpers.R")
 
+tables <- file.path(OUT$source, paste0("supp45_", c("matrix.csv.gz", "rows.csv.gz", "columns.csv", "dendrogram_merges.csv.gz", "dendrogram_leaves.csv.gz", "consensus.csv", "usage.csv.gz")))
+names(tables) <- c("matrix", "rows", "columns", "merges", "leaves", "consensus", "usage")
+
+if (!all(file.exists(tables))) {
 rss_leader <- fread(need(file.path(OUT$rss_leader, "rss_leader_iuis_data.csv.gz")))
 husa_tsv <- need(file.path(OUT$husa, "husa.tsv"))
 gene_order <- fread(need(IN$gene_bed))
@@ -159,18 +165,15 @@ for (panel in names(panels)) {
   add_layer("leader", leader_dt, "leader", hc_leader, leader_subgroup, generate_consensus(leader_seqs, vec_onehot), leader2_start)
 }
 
-matrix_dt <- rbindlist(matrix_out); rows_dt <- rbindlist(rows_out); cols_all <- rbindlist(cols_out)
-merges_dt <- rbindlist(merges_out); leaves_dt <- rbindlist(leaves_out); consensus_dt <- rbindlist(consensus_out); usage_dt <- rbindlist(usage_out)
-fwrite(matrix_dt, file.path(OUT$source, "supp45_matrix.csv.gz"))
-fwrite(rows_dt, file.path(OUT$source, "supp45_rows.csv.gz"))
-fwrite(cols_all, file.path(OUT$source, "supp45_columns.csv"))
-fwrite(merges_dt, file.path(OUT$source, "supp45_dendrogram_merges.csv.gz"))
-fwrite(leaves_dt, file.path(OUT$source, "supp45_dendrogram_leaves.csv.gz"))
-fwrite(consensus_dt, file.path(OUT$source, "supp45_consensus.csv"))
-fwrite(usage_dt, file.path(OUT$source, "supp45_usage.csv.gz"))
-print(rows_dt[, .(rows = .N), by = .(figure, panel, layer)])
+fwrite(rbindlist(matrix_out), tables[["matrix"]]); fwrite(rbindlist(rows_out), tables[["rows"]]); fwrite(rbindlist(cols_out), tables[["columns"]])
+fwrite(rbindlist(merges_out), tables[["merges"]]); fwrite(rbindlist(leaves_out), tables[["leaves"]])
+fwrite(rbindlist(consensus_out), tables[["consensus"]]); fwrite(rbindlist(usage_out), tables[["usage"]])
+print(rbindlist(rows_out)[, .(rows = .N), by = .(figure, panel, layer)])
+}
 
 # ---- draw ----
+matrix_dt <- fread(tables[["matrix"]]); rows_dt <- fread(tables[["rows"]]); cols_all <- fread(tables[["columns"]])
+merges_dt <- fread(tables[["merges"]]); leaves_dt <- fread(tables[["leaves"]]); consensus_dt <- fread(tables[["consensus"]]); usage_dt <- fread(tables[["usage"]])
 count_matrix <- function(dt, rows, cols) {
   wide <- dcast(dt, row_seq ~ column_label, value.var = "count")
   m <- as.matrix(wide[, -"row_seq"]); rownames(m) <- wide$row_seq

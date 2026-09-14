@@ -3,13 +3,20 @@
 # A: sequence logo plus the nine most frequent RSSs with their motif tag and allele count,
 # B: unique alleles and unique RSSs by agreement with the segment consensus,
 # C: HUSA versus IMGT overlap with the per-RSS genomic sample counts.
+# Tables are computed only when missing from results/figures/source_data; the figure is
+# always drawn from them.
 
 source("R/00_setup.R")
-source("R/lib/rss_helpers.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork); library(ggrepel); library(ggseqlogo); library(ComplexUpset); library(ggpubr) })
 set.seed(42)
 
 gene_types <- c("IGLV", "IGKV", "IGHD_3", "IGHJ", "IGLJ", "IGKJ", "IGHD_5")  # panel order down the figure
+tables <- file.path(OUT$source, paste0("supp2_", c("rss_aligned.csv.gz", "seqlogo_input.csv", "rss_letters.csv", "rss_counts.csv", "rss_tags.csv",
+                                                  "imgt_overlap.csv", "imgt_summary.csv", "unique_counts.csv", "panel_layout.csv")))
+names(tables) <- c("aligned", "seqlogo", "letters", "counts", "tags", "overlap", "summary", "unique", "layout")
+
+if (!all(file.exists(tables))) {
+source("R/lib/rss_helpers.R")
 
 # ---- IMGT reference RSSs, F/ORF alleles of genes in the baseline reference ----
 reference_genes <- unlist(lapply(list.files(need(IN$watson_reference), pattern = "IG[HKL][VDJ]\\.fasta$", full.names = TRUE),
@@ -134,18 +141,18 @@ panel_layout <- rbindlist(lapply(gene_types, function(g) {
              y_max = y_max)
 }))
 
-fwrite(rss_data, file.path(OUT$source, "supp2_rss_aligned.csv.gz"))
-fwrite(rss_data[specie == "human", .(gene_type, rss_sequence)], file.path(OUT$source, "supp2_seqlogo_input.csv"))
-fwrite(letters_dt, file.path(OUT$source, "supp2_rss_letters.csv"))
-fwrite(counts_dt, file.path(OUT$source, "supp2_rss_counts.csv"))
-fwrite(tags_dt, file.path(OUT$source, "supp2_rss_tags.csv"))
-fwrite(overlap, file.path(OUT$source, "supp2_imgt_overlap.csv"))
-fwrite(overlap_summary, file.path(OUT$source, "supp2_imgt_summary.csv"))
-fwrite(unique_counts, file.path(OUT$source, "supp2_unique_counts.csv"))
-fwrite(panel_layout, file.path(OUT$source, "supp2_panel_layout.csv"))
+fwrite(rss_data, tables[["aligned"]])
+fwrite(rss_data[specie == "human", .(gene_type, rss_sequence)], tables[["seqlogo"]])
+fwrite(letters_dt, tables[["letters"]]); fwrite(counts_dt, tables[["counts"]]); fwrite(tags_dt, tables[["tags"]])
+fwrite(overlap, tables[["overlap"]]); fwrite(overlap_summary, tables[["summary"]])
+fwrite(unique_counts, tables[["unique"]]); fwrite(panel_layout, tables[["layout"]])
 cat(sprintf("supp2: %d RSS rows, %d segments, %d overlap rows\n", nrow(rss_data), length(gene_types), nrow(overlap)))
+}
 
 # ---- draw ----
+seqlogo_dt <- fread(tables[["seqlogo"]]); letters_dt <- fread(tables[["letters"]]); counts_dt <- fread(tables[["counts"]]); tags_dt <- fread(tables[["tags"]])
+overlap <- fread(tables[["overlap"]]); unique_counts <- fread(tables[["unique"]]); panel_layout <- fread(tables[["layout"]])
+y_max <- panel_layout$y_max[1]
 unique_counts[, consensus_heptamer_nonamer_label := factor(consensus_heptamer_nonamer_label, levels = c("Consensus", "Both", "Non-Consensus"))]
 letter_colors <- c("single" = "#000000", "both" = "#000000", "underline" = "#000000")
 support_colors <- setNames(c("#0072B2", "#aa0415ff"), c("TRUE", "FALSE"))
@@ -170,7 +177,7 @@ rss_panels <- lapply(gene_types, function(g) {
     geom_text_repel(data = counts_dt[gene_type == g], mapping = aes(as.numeric(position), order_update, label = letter, color = color, hjust = 0,
                                                                    size = ifelse(letter == ".", 16, 8)), bg.r = .1, force = 0) +
     scale_color_manual(values = letter_colors) + scale_size_identity() + theme_logo() + bare_axes + theme(plot.margin = margin(0, -0.5, 0, 0, "cm"))
-  p_seqlogo <- ggplot() + geom_logo(rss_data[gene_type == g & specie == "human", rss_sequence], method = "probability", seq_type = "dna") + theme_logo() +
+  p_seqlogo <- ggplot() + geom_logo(seqlogo_dt[gene_type == g, rss_sequence], method = "probability", seq_type = "dna") + theme_logo() +
     scale_x_continuous(breaks = 1:19, expand = c(0, 0)) + labs(title = title) +
     theme(legend.position = "none", axis.text.x = element_blank(), axis.text.y = element_blank(), axis.title.y = element_blank(), axis.title.x = element_blank(),
           axis.ticks.length.x = unit(0, "lines"), plot.title = element_text(hjust = .5, size = 40), plot.margin = margin(0, 0, 0, 0, "pt"))

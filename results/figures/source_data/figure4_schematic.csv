@@ -1,0 +1,23 @@
+xmin,xmax,ymin,ymax,fill,label,xmid,y,layer,colour,size,fontface
+1,2,0.08,0.32,Leader,Exon 1,1.5,0.2,block,#C5B3E6,11,plain
+3.2,4.2,0.08,0.32,Leader,Exon 2,3.7,0.2,block,#C5B3E6,11,plain
+4.2,4.9,0.08,0.32,FR,FR1,4.55,0.2,block,#9FA8DA,11,plain
+4.9,5.7,0.08,0.32,CDR,CDR1,5.3,0.2,block,#BBDEFB,11,plain
+5.7,6.6,0.08,0.32,FR,FR2,6.15,0.2,block,#9FA8DA,11,plain
+6.6,7.4,0.08,0.32,CDR,CDR2,7,0.2,block,#BBDEFB,11,plain
+7.4,8.3,0.08,0.32,FR,FR3,7.85,0.2,block,#9FA8DA,11,plain
+8.3,9.1,0.08,0.32,CDR,CDR3,8.7,0.2,block,#BBDEFB,11,plain
+9.1,9.8,0.08,0.32,FR,FR4,9.45,0.2,block,#9FA8DA,11,plain
+9.8,11,0.08,0.32,Heptamer,"Heptamer
+(7 bp)",10.4,0.2,block,#FFB74D,11,plain
+11,12.2,0.08,0.32,Spacer,"Spacer
+(23 bp)",11.6,0.2,block,#FFE0B2,11,plain
+12.2,13.4,0.08,0.32,Nonamer,"Nonamer
+(9 bp)",12.8,0.2,block,#FFA726,11,plain
+1,4.2,,,,Leader,2.6,0.46,region,,12,bold
+4.2,9.8,,,,Coding region,7,0.46,region,,12,bold
+9.8,13.4,,,,RSS,11.6,0.46,region,,12,bold
+0.8,13.9,,,,,,0.2,backbone,,,
+,,,,,5',0.55,0.2,end_label,,10,plain
+,,,,,3',14.05,0.2,end_label,,10,plain
+,,,,,Schematics of IGHV gene structure,7.2,0.75,title,,15,bold

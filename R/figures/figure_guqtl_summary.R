@@ -2,43 +2,47 @@
 # guQTL summary figure. A: a cartoon of the three steps of the scan (seeded synthetic values,
 # not a result). B: significant gene-usage QTL SNP counts by location, per locus and segment,
 # from the QTL variant summary; UTR is folded into intergenic.
+# Tables are computed only when missing from results/figures/source_data; the figure is
+# always drawn from them.
 
 source("R/00_setup.R")
 suppressPackageStartupMessages({ library(ggplot2); library(patchwork) })
-set.seed(42)
 
 feat_levels <- c("coding", "leader", "rss", "intergenic")
 seg_levels <- c("V", "D", "DJ", "J")
 loc_levels <- c("IGH", "IGK", "IGL")
+tables <- file.path(OUT$source, paste0("figure_guqtl_summary_", c("counts", "chrom", "gene_model", "gene_snps", "assoc", "assoc_trend", "manhattan"), ".csv"))
+names(tables) <- c("counts", "chrom", "gene_model", "gene_snps", "assoc", "assoc_trend", "manhattan")
 
-vs <- fread(need(file.path(OUT$qtl, "reports", "variant_summary.tsv")))[analysis == "usage"]
-vs[feature == "utr", feature := "intergenic"]
-counts <- vs[feature %in% feat_levels, .(n_significant = sum(n_variants), n_kept = sum(n_variants_kept)), by = .(locus, segment, feature)]
-setorderv(counts, c("locus", "segment", "feature"))
-print(counts)
+if (!all(file.exists(tables))) {
+  set.seed(42)
+  vs <- fread(need(file.path(OUT$qtl, "reports", "variant_summary.tsv")))[analysis == "usage"]
+  vs[feature == "utr", feature := "intergenic"]
+  counts <- vs[feature %in% feat_levels, .(n_significant = sum(n_variants), n_kept = sum(n_variants_kept)), by = .(locus, segment, feature)]
+  setorderv(counts, c("locus", "segment", "feature"))
+  print(counts)
 
-# Schematic: a chromosome with widely spaced genes (V = leader | coding | rss, D = rss | coding | rss,
-# J = rss | coding), SNPs mostly in the intergenic gaps, an illustrative association and a kb-scale Manhattan.
-chrom <- data.table(xmin = 0, xmax = 132, ymin = 0.97, ymax = 1.03)
-gene_model <- rbindlist(list(
-  data.table(feature = c("leader", "coding", "rss"), xmin = c(12, 14, 20), xmax = c(14, 20, 22)),
-  data.table(feature = c("leader", "coding", "rss"), xmin = c(36, 38, 44), xmax = c(38, 44, 46)),
-  data.table(feature = c("rss", "coding", "rss"), xmin = c(62, 64, 70), xmax = c(64, 70, 72)),
-  data.table(feature = c("leader", "coding", "rss"), xmin = c(88, 90, 96), xmax = c(90, 96, 98)),
-  data.table(feature = c("rss", "coding"), xmin = c(114, 116), xmax = c(116, 122))
-))[, `:=`(ymin = 0.75, ymax = 1.25)]
-gene_snps <- data.table(x = c(5, 28, 30, 53, 56, 80, 83, 105, 128, 17, 41, 67, 93, 119, 13, 37, 89, 21, 63, 71, 115),
-                        feature = c(rep("intergenic", 9), rep("coding", 5), rep("leader", 3), rep("rss", 4)))
-assoc <- rbindlist(lapply(0:2, function(g) data.table(genotype = g, usage = pmax(0, rnorm(18, 0.28 + 0.13 * g, 0.045)))))
-assoc_trend <- data.table(genotype = 0:2, usage = 0.28 + 0.13 * (0:2))
-manhattan <- rbind(data.table(pos = sort(runif(70, 0, 1500)), logp = abs(rnorm(70, 0, 0.7)), feature = "intergenic", significant = FALSE),
-                   data.table(pos = c(340, 705, 780, 1020, 1215), logp = c(6.4, 9.1, 4.6, 7.2, 5.1),
-                              feature = c("coding", "coding", "leader", "rss", "coding"), significant = TRUE))
+  # Schematic: a chromosome with widely spaced genes (V = leader | coding | rss, D = rss | coding | rss,
+  # J = rss | coding), SNPs mostly in the intergenic gaps, an illustrative association and a kb-scale Manhattan.
+  chrom <- data.table(xmin = 0, xmax = 132, ymin = 0.97, ymax = 1.03)
+  gene_model <- rbindlist(list(
+    data.table(feature = c("leader", "coding", "rss"), xmin = c(12, 14, 20), xmax = c(14, 20, 22)),
+    data.table(feature = c("leader", "coding", "rss"), xmin = c(36, 38, 44), xmax = c(38, 44, 46)),
+    data.table(feature = c("rss", "coding", "rss"), xmin = c(62, 64, 70), xmax = c(64, 70, 72)),
+    data.table(feature = c("leader", "coding", "rss"), xmin = c(88, 90, 96), xmax = c(90, 96, 98)),
+    data.table(feature = c("rss", "coding"), xmin = c(114, 116), xmax = c(116, 122))
+  ))[, `:=`(ymin = 0.75, ymax = 1.25)]
+  gene_snps <- data.table(x = c(5, 28, 30, 53, 56, 80, 83, 105, 128, 17, 41, 67, 93, 119, 13, 37, 89, 21, 63, 71, 115),
+                          feature = c(rep("intergenic", 9), rep("coding", 5), rep("leader", 3), rep("rss", 4)))
+  assoc <- rbindlist(lapply(0:2, function(g) data.table(genotype = g, usage = pmax(0, rnorm(18, 0.28 + 0.13 * g, 0.045)))))
+  assoc_trend <- data.table(genotype = 0:2, usage = 0.28 + 0.13 * (0:2))
+  manhattan <- rbind(data.table(pos = sort(runif(70, 0, 1500)), logp = abs(rnorm(70, 0, 0.7)), feature = "intergenic", significant = FALSE),
+                     data.table(pos = c(340, 705, 780, 1020, 1215), logp = c(6.4, 9.1, 4.6, 7.2, 5.1),
+                                feature = c("coding", "coding", "leader", "rss", "coding"), significant = TRUE))
+  for (nm in names(tables)) fwrite(get(nm), tables[[nm]])
+}
 
-fwrite(counts, file.path(OUT$source, "figure_guqtl_summary_counts.csv"))
-fwrite(manhattan, file.path(OUT$source, "figure_guqtl_summary_manhattan.csv"))
-fwrite(assoc, file.path(OUT$source, "figure_guqtl_summary_assoc.csv"))
-
+for (nm in names(tables)) assign(nm, fread(tables[[nm]]))
 for (dt in list(gene_model, gene_snps, manhattan)) set(dt, j = "feature", value = factor(dt$feature, levels = feat_levels))
 assoc[, genotype := factor(genotype, levels = 0:2)]
 assoc_trend[, genotype := factor(genotype, levels = 0:2)]
@@ -47,6 +51,7 @@ counts[, `:=`(feature = factor(feature, levels = feat_levels), segment = factor(
 feat_cols <- c(coding = "#2a78d6", leader = "#eda100", rss = "#1baf7a", intergenic = "#8c6bb1")
 geno_labels <- c(`0` = "0/0", `1` = "0/1", `2` = "1/1")
 step_title <- function() theme(plot.title = element_text(size = 13, hjust = 0.5, face = "bold"))
+set.seed(42)  # the jittered association points
 
 g1 <- ggplot() +
   geom_rect(data = chrom, aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax), fill = feat_cols[["intergenic"]], colour = NA) +

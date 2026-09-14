@@ -2,11 +2,11 @@
 # Figure 3: the AIRR-seq allele ranking (A) and the IGHV RSS and leader characterisation:
 # sequence logos (B, C), unique allele and unique motif counts by agreement with the IGHV
 # consensus (D, E), and the HUSA-vs-IMGT overlap of unique motifs (F, G).
+# Tables are computed only when missing from results/figures/source_data; the figure is
+# always drawn from them.
 
 source("R/00_setup.R")
-source("R/lib/rss_helpers.R")
-suppressPackageStartupMessages({ library(ggplot2); library(ggpubr); library(ggseqlogo); library(ComplexUpset); library(cowplot); library(ggrepel)
-  library(Biostrings); library(alakazam) })
+suppressPackageStartupMessages({ library(ggplot2); library(ggpubr); library(ggseqlogo); library(ComplexUpset); library(cowplot); library(ggrepel) })
 set.seed(42)
 
 rank_gene_types <- c("IGHV", "IGHD", "IGHJ", "IGKV", "IGKJ", "IGLV", "IGLJ")
@@ -16,6 +16,13 @@ count_csv <- function(x) uniqueN(split_csv(x))
 degap <- function(x) toupper(gsub("[.-]", "", as.character(x)))
 modal_len <- function(x) { x <- x[nzchar(x)]; if (!length(x)) return(NA_integer_); tl <- table(nchar(x)); as.integer(names(tl)[which.max(tl)]) }
 
+tables <- file.path(OUT$source, paste0("figure3_", c("A_rank", "A_pie", "A_dagger_alleles", "B_rss_seqlogo_input", "B_rss_unique_counts", "B_rss_imgt_overlap",
+                                                    "C_leader_seqlogo_input", "C_leader_unique_counts", "C_leader_imgt_overlap"), ".csv"))
+names(tables) <- c("rank", "pie", "dagger", "rss_logo", "rss_counts", "rss_overlap", "leader_logo", "leader_counts", "leader_overlap")
+
+if (!all(file.exists(tables))) {
+source("R/lib/rss_helpers.R")
+suppressPackageStartupMessages({ library(Biostrings); library(alakazam) })
 husa <- fread(need(file.path(OUT$husa, "husa.tsv")))
 
 # ---- A: alleles ranked by the number of AIRR-seq individuals carrying them ----
@@ -135,19 +142,23 @@ for (col in c("count_husa", "count_imgt", "count_genomic")) leader_overlap[is.na
 leader_overlap[is.na(present), present := FALSE]
 leader_overlap[, `:=`(HUSA = count_husa > 0, IMGT = count_imgt > 0, above_zero = count_genomic > 0)]
 
-fwrite(rank_data, file.path(OUT$source, "figure3_A_rank.csv"))
-fwrite(rank_pie, file.path(OUT$source, "figure3_A_pie.csv"))
-fwrite(dagger_alleles, file.path(OUT$source, "figure3_A_dagger_alleles.csv"))
-fwrite(rss_data[, .(gene_type, allele, rss_aligned, rss_sequence, Heptamer, Spacer, Nonamer)], file.path(OUT$source, "figure3_B_rss_seqlogo_input.csv"))
-fwrite(rss_unique_counts, file.path(OUT$source, "figure3_B_rss_unique_counts.csv"))
-fwrite(rss_overlap, file.path(OUT$source, "figure3_B_rss_imgt_overlap.csv"))
-fwrite(leader_seqlogo_input, file.path(OUT$source, "figure3_C_leader_seqlogo_input.csv"))
-fwrite(leader_unique_counts, file.path(OUT$source, "figure3_C_leader_unique_counts.csv"))
-fwrite(leader_overlap[, .(gene_type, leader, HUSA, IMGT, present, count_genomic, above_zero)], file.path(OUT$source, "figure3_C_leader_imgt_overlap.csv"))
+fwrite(rank_data, tables[["rank"]])
+fwrite(rank_pie, tables[["pie"]])
+fwrite(dagger_alleles, tables[["dagger"]])
+fwrite(rss_data[, .(gene_type, allele, rss_aligned, rss_sequence, Heptamer, Spacer, Nonamer)], tables[["rss_logo"]])
+fwrite(rss_unique_counts, tables[["rss_counts"]])
+fwrite(rss_overlap, tables[["rss_overlap"]])
+fwrite(leader_seqlogo_input, tables[["leader_logo"]])
+fwrite(leader_unique_counts, tables[["leader_counts"]])
+fwrite(leader_overlap[, .(gene_type, leader, HUSA, IMGT, present, count_genomic, above_zero)], tables[["leader_overlap"]])
 cat(sprintf("figure3: %d ranked alleles (%d labelled), %d IGHV RSS rows, %d IGHV leader alleles\n",
             nrow(rank_data), sum(rank_data$ranked), nrow(rss_data), nrow(leader_data)))
+}
 
 # ---- draw ----
+rank_data <- fread(tables[["rank"]]); rank_pie <- fread(tables[["pie"]])
+rss_seqlogo <- fread(tables[["rss_logo"]]); rss_unique_counts <- fread(tables[["rss_counts"]]); rss_overlap <- fread(tables[["rss_overlap"]])
+leader_seqlogo_input <- fread(tables[["leader_logo"]]); leader_unique_counts <- fread(tables[["leader_counts"]]); leader_overlap <- fread(tables[["leader_overlap"]])
 rss_unique_counts[, `:=`(consensus_label = factor(consensus_label, levels = consensus_levels), variable = factor(variable, levels = c("unique_allele_count", "unique_rss_count")))]
 leader_unique_counts[, `:=`(consensus_label = factor(consensus_label, levels = consensus_levels), variable = factor(variable, levels = c("Alleles", "Leaders")))]
 consensus_colors <- setNames(c("#B8860B", "#008B8B", "#A63D40"), consensus_levels)
@@ -193,7 +204,7 @@ panel_a <- plot_grid(
 
 logo_theme <- theme(legend.position = "none", axis.text.x = element_blank(), axis.text.y = element_blank(), axis.title.y = element_blank(),
                     axis.title.x = element_blank(), axis.ticks.length.x = unit(0, "lines"), plot.margin = margin(0, 0, 0, 0, "pt"))
-rss_logo_seqs <- rss_data$rss_sequence
+rss_logo_seqs <- rss_seqlogo$rss_sequence
 p_rss_logo <- ggplot() + geom_logo(rss_logo_seqs, method = "probability", seq_type = "dna") + theme_logo() + logo_theme +
   scale_x_continuous(breaks = seq_len(max(nchar(rss_logo_seqs))), expand = c(0, 0))
 leader_logo_seqs <- rep(leader_seqlogo_input$leader_logo_seq, leader_seqlogo_input$n_alleles)

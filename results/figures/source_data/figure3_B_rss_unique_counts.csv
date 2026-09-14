@@ -1,0 +1,7 @@
+gene_type,variable,value,consensus_label
+IGHV,unique_allele_count,130,Either
+IGHV,unique_allele_count,21,None
+IGHV,unique_allele_count,111,Both
+IGHV,unique_rss_count,26,Either
+IGHV,unique_rss_count,4,None
+IGHV,unique_rss_count,14,Both
