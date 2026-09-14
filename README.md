@@ -13,12 +13,12 @@ R (>= 4.2) with `data.table`, `alakazam`, `tigger`, `Biostrings`, `stringdist`, 
 `igraph`, `ape`, `dendextend`, `seriation`, `ggplot2`, `ggpubr`, `patchwork`, `cowplot`,
 `ggrepel`, `ggseqlogo`, `ggh4x`, `ComplexUpset`, `ggVennDiagram`, `ggvenn`, `ComplexHeatmap`,
 `circlize`, `gridtext`, `GetoptLong`, `digest`, `mallinfo`, `jsonlite`, and
-[`piglet`](https://github.com/ayeletperes/piglet) 1.5.0.999, which provides the allele
+[`piglet`](https://github.com/ayeletperes/piglet) 1.5.0, which provides the allele
 similarity clustering, the ASC-to-IUIS vocabulary and the QTL scans. Install the exact
-version used here, pinned by commit:
+version used here, pinned by release tag:
 
 ```r
-remotes::install_github("ayeletperes/piglet", ref = "8f0b81533208fa51fad9b1cff0f0684e62d71c71")
+remotes::install_github("ayeletperes/piglet", ref = "v1.5.0")
 ```
 
 The repertoire and QTL stages hold the full in-house repertoires in memory (about 8 GB).
