@@ -1,8 +1,8 @@
 gene_type,n_baseline_only,n_husa_only,n_imgt_only,n_baseline_husa,n_baseline_imgt,n_husa_imgt,n_all_three,n_baseline_total,n_husa_total,n_imgt_in_scope_total,n_husa_novel,n_husa_novel_in_imgt,n_husa_novel_not_imgt
-IGHV,0,452,144,24,0,21,176,200,673,341,473,21,452
+IGHV,0,450,144,24,0,21,176,200,671,341,471,21,450
 IGHD,0,25,5,0,0,0,31,31,56,36,25,0,25
-IGHJ,0,5,6,0,0,1,7,7,13,14,6,1,5
+IGHJ,0,2,6,0,0,1,7,7,10,14,3,1,2
 IGKV,0,220,13,5,0,14,61,66,300,88,234,14,220
 IGKJ,0,13,3,0,0,0,7,7,20,10,13,0,13
-IGLV,0,282,22,12,0,11,69,81,374,102,293,11,282
+IGLV,0,280,22,12,0,11,69,81,372,102,291,11,280
 IGLJ,0,9,0,1,0,0,8,9,18,8,9,0,9
