@@ -47,7 +47,8 @@ Rscript scripts/04_qtl.R
 
 ## Data
 
-The inputs (about 436 MB) are archived on Zenodo, DOI `TODO` (assigned at
+The inputs (`husa_data.tar.gz`, about 293 MB) are archived on Zenodo, DOI
+[10.5281/zenodo.22759738](https://doi.org/10.5281/zenodo.22759738) (released at
 publication). Download the archive and unpack it into `data/`. The AIRR-seq and
 genomic sequencing datasets are in the SRA under accession `PRJNA1274485`.
 
